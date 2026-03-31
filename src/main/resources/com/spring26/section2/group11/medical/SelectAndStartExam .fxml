@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.StudentManagerController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.SelectAndStartExamController">
    <children>
       <Label fx:id="display1" layoutX="54.0" layoutY="53.0" text="Choose Your Medical Examination Subject" />
       <ComboBox fx:id="examSubjectCB" layoutX="290.0" layoutY="49.0" prefWidth="150.0" promptText="Exam Subject" />

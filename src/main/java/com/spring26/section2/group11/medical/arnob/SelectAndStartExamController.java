@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
-public class StudentManagerController {
+public class SelectAndStartExamController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
