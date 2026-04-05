@@ -15,11 +15,11 @@ public class ViewexamresultsanddownloadPDFController {
     @javafx.fxml.FXML
     private TableColumn subjectCol;
     @javafx.fxml.FXML
-    private TableColumn totslCol;
-    @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML
     private TableView viewResultTable;
+    @javafx.fxml.FXML
+    private TableColumn totalCol;
 
     @javafx.fxml.FXML
     public void viewResultButton(ActionEvent actionEvent) {
