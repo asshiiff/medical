@@ -1,9 +1,11 @@
 package com.spring26.section2.group11.medical.ashif;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class QuestionDistributionController
+public class AnalyzeQuestionDistributionController
 {
     @javafx.fxml.FXML
     private TableColumn typeCol;
@@ -12,8 +14,15 @@ public class QuestionDistributionController
     @javafx.fxml.FXML
     private TableColumn eventCol;
     @javafx.fxml.FXML
+    private Label display;
+    @javafx.fxml.FXML
     private TableColumn descriptionCol;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void actionButton(ActionEvent actionEvent) {
+    }
+}
