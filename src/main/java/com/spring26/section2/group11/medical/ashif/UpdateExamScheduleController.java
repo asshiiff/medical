@@ -1,5 +1,8 @@
 package com.spring26.section2.group11.medical.ashif;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class UpdateExamScheduleController
 {
     @javafx.fxml.FXML
