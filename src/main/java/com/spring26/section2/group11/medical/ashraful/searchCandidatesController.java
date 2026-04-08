@@ -25,4 +25,8 @@ public class searchCandidatesController
     @javafx.fxml.FXML
     public void searchCandidate(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

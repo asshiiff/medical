@@ -22,4 +22,8 @@ public class viewCandidateListController
     @javafx.fxml.FXML
     public void loadRegisteredCandidates(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

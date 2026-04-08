@@ -6,14 +6,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashraful.createExamController">
    <children>
-      <TextField fx:id="examNameField" layoutX="31.0" layoutY="42.0" promptText="Exam Name" />
-      <TextField fx:id="durationField" layoutX="219.0" layoutY="42.0" promptText="Duration" />
-      <TextField fx:id="totalMarksField" layoutX="407.0" layoutY="42.0" promptText="Total Marks" />
-      <TextArea fx:id="examInstructionsTextArea" layoutX="31.0" layoutY="88.0" prefHeight="202.0" prefWidth="537.0" promptText="Exam Instructions" />
-      <ComboBox fx:id="selectSubjectCB" layoutX="31.0" layoutY="312.0" prefWidth="150.0" promptText="Select Subject" />
-      <Button layoutX="31.0" layoutY="359.0" mnemonicParsing="false" onAction="#saveExamFileButton" text="Save Exam File" />
+      <TextField fx:id="examNameField" layoutX="31.0" layoutY="14.0" promptText="Exam Name" />
+      <TextField fx:id="durationField" layoutX="219.0" layoutY="14.0" promptText="Duration" />
+      <TextField fx:id="totalMarksField" layoutX="407.0" layoutY="14.0" promptText="Total Marks" />
+      <TextArea fx:id="examInstructionsTextArea" layoutX="31.0" layoutY="60.0" prefHeight="202.0" prefWidth="537.0" promptText="Exam Instructions" />
+      <ComboBox fx:id="selectSubjectCB" layoutX="31.0" layoutY="273.0" prefWidth="150.0" promptText="Select Subject" />
+      <Button layoutX="206.0" layoutY="273.0" mnemonicParsing="false" onAction="#saveExamFileButton" text="Save Exam File" />
+      <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

@@ -18,7 +18,7 @@ public class approveApplicationController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void approveApplicationsTabButton(ActionEvent actionEvent) {
     }
 
@@ -36,5 +36,9 @@ public class approveApplicationController
 
     @javafx.fxml.FXML
     public void acceptButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

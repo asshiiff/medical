@@ -22,4 +22,8 @@ public class viewSeatingArrangementController
     @javafx.fxml.FXML
     public void viewSeatingArrangmentButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

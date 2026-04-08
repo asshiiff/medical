@@ -26,4 +26,8 @@ public class reviewExamResultsController
     @javafx.fxml.FXML
     public void loadExamResultsButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

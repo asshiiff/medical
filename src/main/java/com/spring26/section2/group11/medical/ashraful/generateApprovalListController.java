@@ -11,8 +11,6 @@ public class generateApprovalListController
     private TableView applicationsTable;
     @javafx.fxml.FXML
     private TableColumn applicationsListCol;
-    @javafx.fxml.FXML
-    private Button approvedApplicationsTab;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -20,5 +18,9 @@ public class generateApprovalListController
 
     @javafx.fxml.FXML
     public void downloadListButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }
