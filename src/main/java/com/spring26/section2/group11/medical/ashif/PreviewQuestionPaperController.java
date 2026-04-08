@@ -15,4 +15,8 @@ public class PreviewQuestionPaperController
     @javafx.fxml.FXML
     public void previewButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

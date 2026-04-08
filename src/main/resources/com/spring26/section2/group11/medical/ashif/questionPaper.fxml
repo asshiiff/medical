@@ -18,5 +18,6 @@
          </columnResizePolicy>
       </TableView>
       <Button layoutX="446.0" layoutY="333.0" mnemonicParsing="false" onAction="#addButton" text="Download PDF" />
+      <Button layoutX="57.0" layoutY="333.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

@@ -25,4 +25,8 @@ public class AnalyzeQuestionDistributionController
     @javafx.fxml.FXML
     public void actionButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }
