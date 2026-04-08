@@ -21,4 +21,8 @@ public class CategorizeQuestionsController
     @javafx.fxml.FXML
     public void assignButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

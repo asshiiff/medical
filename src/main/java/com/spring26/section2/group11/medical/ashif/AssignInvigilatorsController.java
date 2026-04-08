@@ -26,4 +26,8 @@ public class AssignInvigilatorsController
     @javafx.fxml.FXML
     public void assignButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

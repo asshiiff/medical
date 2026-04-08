@@ -15,4 +15,8 @@ public class CenterForExamController
     @javafx.fxml.FXML
     public void centerButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

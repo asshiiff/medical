@@ -22,6 +22,7 @@
       <ComboBox fx:id="subjectCB" layoutX="35.0" layoutY="268.0" prefWidth="150.0" promptText="Subject" />
       <ComboBox fx:id="difficultyCB" layoutX="247.0" layoutY="268.0" prefWidth="150.0" promptText="Difficulty" />
       <Button layoutX="432.0" layoutY="268.0" mnemonicParsing="false" text="Add Question " />
-      <Label fx:id="display" layoutX="35.0" layoutY="342.0" prefHeight="17.0" prefWidth="265.0" />
+      <Label fx:id="display" layoutX="35.0" layoutY="355.0" prefHeight="17.0" prefWidth="265.0" />
+      <Button layoutX="35.0" layoutY="330.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

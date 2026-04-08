@@ -30,4 +30,8 @@ public class GenerateReportsController
     @javafx.fxml.FXML
     public void reportButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }
