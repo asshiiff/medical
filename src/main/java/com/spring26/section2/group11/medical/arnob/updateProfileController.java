@@ -27,4 +27,8 @@ public class updateProfileController {
     @javafx.fxml.FXML
     public void updateButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

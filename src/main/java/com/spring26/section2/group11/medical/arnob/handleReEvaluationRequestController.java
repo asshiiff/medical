@@ -39,4 +39,8 @@ public class handleReEvaluationRequestController {
     @javafx.fxml.FXML
     public void approveButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

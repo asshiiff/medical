@@ -12,5 +12,6 @@
       <ComboBox fx:id="examSubjectCB" layoutX="290.0" layoutY="49.0" prefWidth="150.0" promptText="Exam Subject" />
       <Button layoutX="225.0" layoutY="319.0" mnemonicParsing="false" onAction="#startExamButton" text="Start Exam" />
       <TextArea fx:id="instructionsArea" layoutX="-1.0" layoutY="100.0" prefHeight="157.0" prefWidth="600.0" text="Exam Instructions:&#10;                               1. Read all questions carefully.&#10;&#10;                               2. Do not close the system during exam.&#10;&#10;                               3. One answer per question.&#10;&#10;                               4. Click “Start Exam” to begin." />
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

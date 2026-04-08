@@ -26,4 +26,8 @@ public class paymentHistoryController {
     @javafx.fxml.FXML
     public void payNowButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

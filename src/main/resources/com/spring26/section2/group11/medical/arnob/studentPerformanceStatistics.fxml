@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="572.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.studentPerformanceStatisticsController">
    <children>
       <Label fx:id="display1" layoutX="224.0" layoutY="14.0" text="Student Performance Statistics">
@@ -21,8 +20,9 @@
       <DatePicker fx:id="fromLocalDate" layoutX="331.0" layoutY="63.0" />
       <DatePicker fx:id="toLocalDate" layoutX="555.0" layoutY="63.0" />
       <Button layoutX="346.0" layoutY="109.0" mnemonicParsing="false" onAction="#statisticsButton" text="Statistics" textFill="#141313" />
-      <PieChart fx:id="resultChart" layoutX="7.0" layoutY="145.0" prefHeight="427.0" prefWidth="767.0" />
+      <PieChart fx:id="resultChart" layoutY="145.0" prefHeight="315.0" prefWidth="767.0" />
       <Label fx:id="display3" layoutX="283.0" layoutY="67.0" text="From : " />
       <Label fx:id="display4" layoutX="532.0" layoutY="67.0" text="To : " />
+      <Button layoutX="32.0" layoutY="497.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

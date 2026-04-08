@@ -36,4 +36,8 @@ public class finalResultSheetPublicationController {
     @javafx.fxml.FXML
     public void loadButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

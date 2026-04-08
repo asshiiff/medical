@@ -27,4 +27,8 @@ public class studentPerformanceStatisticsController {
     @javafx.fxml.FXML
     public void statisticsButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

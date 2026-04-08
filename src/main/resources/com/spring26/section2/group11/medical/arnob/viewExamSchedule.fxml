@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.viewExamScheduleController">
    <children>
-      <Label fx:id="display1" layoutX="232.0" layoutY="25.0" prefHeight="27.0" prefWidth="137.0" text="Exam Schedule">
+      <Label fx:id="display1" layoutX="223.0" layoutY="14.0" prefHeight="27.0" prefWidth="137.0" text="Exam Schedule">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -33,5 +32,6 @@
       </Label>
       <TextArea fx:id="detailsArea" layoutX="76.0" layoutY="253.0" prefHeight="63.0" prefWidth="431.0" text="room 101&#10;select exam see " />
       <Button layoutX="317.0" layoutY="347.0" mnemonicParsing="false" onAction="#nextButton" prefHeight="25.0" prefWidth="90.0" text="Next" />
+      <Button layoutX="19.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

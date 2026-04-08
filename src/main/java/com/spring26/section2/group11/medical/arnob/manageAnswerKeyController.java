@@ -22,4 +22,8 @@ public class manageAnswerKeyController {
     @javafx.fxml.FXML
     public void saveButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

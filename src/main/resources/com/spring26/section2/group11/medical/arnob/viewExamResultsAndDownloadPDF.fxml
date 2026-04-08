@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.ViewexamresultsanddownloadPDFController">
    <children>
@@ -19,9 +20,13 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Label fx:id="display1" layoutX="259.0" layoutY="35.0" prefHeight="17.0" prefWidth="73.0" text="Exam Result" />
+      <Label fx:id="display1" layoutX="162.0" layoutY="18.0" prefHeight="27.0" prefWidth="276.0" text="Exam Result and Download PDF">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
       <Button layoutX="416.0" layoutY="294.0" mnemonicParsing="false" onAction="#downloadPdfButton" text="Download PDF" />
       <Button layoutX="445.0" layoutY="31.0" mnemonicParsing="false" onAction="#viewResultButton" text="View Result" />
       <Label fx:id="display2" layoutX="396.0" layoutY="337.0" prefHeight="17.0" prefWidth="136.0" text="Download PDF Success " />
+      <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" onAction="#bactButton" text="Back" />
    </children>
 </AnchorPane>

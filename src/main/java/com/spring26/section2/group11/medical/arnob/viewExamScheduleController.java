@@ -25,4 +25,8 @@ public class viewExamScheduleController {
     @javafx.fxml.FXML
     public void nextButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

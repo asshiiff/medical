@@ -28,4 +28,8 @@ public class ViewexamresultsanddownloadPDFController {
     @javafx.fxml.FXML
     public void downloadPdfButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void bactButton(ActionEvent actionEvent) {
+    }
 }

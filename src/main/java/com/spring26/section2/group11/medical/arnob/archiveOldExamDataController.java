@@ -1,27 +1,26 @@
 package com.spring26.section2.group11.medical.arnob;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
-public class requestReEvaluationController {
+public class archiveOldExamDataController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private ComboBox selectExamCB;
+    private TableView oldExamTable;
     @javafx.fxml.FXML
-    private Label display3;
+    private TableColumn examCol;
     @javafx.fxml.FXML
-    private TextField reasonField;
+    private TableColumn subjectCol;
+    @javafx.fxml.FXML
+    private TableColumn semesterCol;
     @javafx.fxml.FXML
     private Label display2;
-    @javafx.fxml.FXML
-    private Label display4;
 
     @javafx.fxml.FXML
-    public void submitRequestButton(ActionEvent actionEvent) {
+    public void dataButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

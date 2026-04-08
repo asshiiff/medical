@@ -23,6 +23,10 @@ public class ChecksAnswersAndGivesMarksController {
     private Label display2;
 
     @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
     public void uploadButton(ActionEvent actionEvent) {
     }
 }

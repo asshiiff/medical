@@ -32,4 +32,8 @@ public class EvalutorCreatesRankingController {
     @javafx.fxml.FXML
     public void exportPDFButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }
