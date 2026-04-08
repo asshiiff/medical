@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.HelloController">
+
+<AnchorPane prefHeight="555.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashraful.approveApplicationController">
    <children>
-      <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" text="Approve Applications" />
-      <TableView layoutX="175.0" layoutY="99.0" prefHeight="201.0" prefWidth="410.0">
+      <Button layoutX="14.0" layoutY="40.0" mnemonicParsing="false" onAction="#approveApplicationsTabButton" text="Approve Applications" />
+      <TableView fx:id="examsTable" layoutX="172.0" layoutY="40.0" prefHeight="201.0" prefWidth="413.0">
         <columns>
-          <TableColumn prefWidth="123.96844482421875" text="Applications" />
+          <TableColumn fx:id="examIdColumn" prefWidth="75.0" text="Exam ID" />
+          <TableColumn fx:id="examNameColumn" prefWidth="75.0" text="Exam Name" />
+            <TableColumn fx:id="examDateColumn" prefWidth="75.0" text="Exam Date" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ComboBox layoutX="213.0" layoutY="47.0" prefWidth="150.0" promptText="Exams" />
-      <Button layoutX="386.0" layoutY="47.0" mnemonicParsing="false" text="Check Applications for Exam" />
-      <Button layoutX="175.0" layoutY="312.0" mnemonicParsing="false" text="Review Application" />
-      <Button layoutX="175.0" layoutY="360.0" mnemonicParsing="false" text="Accept" />
-      <Button layoutX="259.0" layoutY="360.0" mnemonicParsing="false" text="Reject" />
+      <TableView fx:id="applicationsTable" layoutX="172.0" layoutY="277.0" prefHeight="201.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="applicationIdColumn" prefWidth="75.0" text="Application Id" />
+          <TableColumn fx:id="studentNameColumn" prefWidth="75.0" text="Student Name" />
+            <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="172.0" layoutY="502.0" mnemonicParsing="false" onAction="#acceptButton" text="Accept" />
+      <Button layoutX="252.0" layoutY="502.0" mnemonicParsing="false" onAction="#rejectButton" text="Reject" />
    </children>
 </AnchorPane>
