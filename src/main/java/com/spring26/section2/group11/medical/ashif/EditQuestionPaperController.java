@@ -9,11 +9,11 @@ import javafx.scene.control.TextArea;
 public class EditQuestionPaperController
 {
     @javafx.fxml.FXML
-    private ComboBox difficultyCB;
+    private ComboBox<String> difficultyCB;
     @javafx.fxml.FXML
-    private TableColumn questionListCol;
+    private TableColumn<QuestionSetter,String> questionListCol;
     @javafx.fxml.FXML
-    private TableView questionListTable;
+    private TableView<QuestionSetter> questionListTable;
     @javafx.fxml.FXML
     private TextArea textArea;
 

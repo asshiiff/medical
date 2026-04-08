@@ -10,11 +10,11 @@ public class CancelResheduleExamController
     @javafx.fxml.FXML
     private DatePicker datePicker;
     @javafx.fxml.FXML
-    private ComboBox newTimeCB;
+    private ComboBox<String> newTimeCB;
     @javafx.fxml.FXML
-    private TableView examlistTable;
+    private TableView<ExamController> examlistTable;
     @javafx.fxml.FXML
-    private TableColumn examlistCol;
+    private TableColumn<ExamController,String> examlistCol;
 
     @javafx.fxml.FXML
     public void initialize() {

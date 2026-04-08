@@ -6,7 +6,7 @@ import javafx.scene.control.ComboBox;
 public class CenterForExamController
 {
     @javafx.fxml.FXML
-    private ComboBox centerCB;
+    private ComboBox<String> centerCB;
 
     @javafx.fxml.FXML
     public void initialize() {

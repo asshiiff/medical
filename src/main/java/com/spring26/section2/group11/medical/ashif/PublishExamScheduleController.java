@@ -15,9 +15,9 @@ public class PublishExamScheduleController
     @javafx.fxml.FXML
     private TextField passwordField;
     @javafx.fxml.FXML
-    private TableColumn examlistCol;
+    private TableColumn<ExamController,String> examlistCol;
     @javafx.fxml.FXML
-    private TableView examlistTable;
+    private TableView<ExamController> examlistTable;
 
     @javafx.fxml.FXML
     public void initialize() {
