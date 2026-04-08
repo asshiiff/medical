@@ -19,8 +19,8 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#attendanceTabButton" prefHeight="28.0" prefWidth="105.0" text="Attendance" />
       <Button layoutX="150.0" layoutY="325.0" mnemonicParsing="false" onAction="#submitAttendanceButton" text="Submit Attendance" />
       <Button layoutX="319.0" layoutY="46.0" mnemonicParsing="false" onAction="#loadStudentListButton" text="Load Student List" />
+      <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

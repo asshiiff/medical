@@ -25,4 +25,8 @@ public class createExamController
     @javafx.fxml.FXML
     public void saveExamFileButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

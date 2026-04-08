@@ -18,4 +18,8 @@ public class DateAndTimeForExamController
     @javafx.fxml.FXML
     public void dateAndTimeButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

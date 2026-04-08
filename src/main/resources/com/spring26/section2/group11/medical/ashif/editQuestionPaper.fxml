@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashif.EditQuestionPaperController">
    <children>
       <TextArea fx:id="textArea" layoutX="51.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" promptText="Edit Question" />
@@ -21,5 +20,6 @@
       </TableView>
       <ComboBox fx:id="difficultyCB" layoutX="51.0" layoutY="274.0" prefWidth="150.0" promptText="Difficulty: Easy/Medium/Hard" />
       <Button layoutX="420.0" layoutY="274.0" mnemonicParsing="false" onAction="#changeButton" text="Save Changes" />
+      <Button layoutX="51.0" layoutY="340.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

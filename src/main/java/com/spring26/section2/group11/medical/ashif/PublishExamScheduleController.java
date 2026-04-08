@@ -30,4 +30,8 @@ public class PublishExamScheduleController
     @javafx.fxml.FXML
     public void loginButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

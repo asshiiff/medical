@@ -21,6 +21,7 @@
          </columnResizePolicy>
       </TableView>
       <Button layoutX="475.0" layoutY="311.0" mnemonicParsing="false" onAction="#downloadButton" text="Download" />
-      <Label fx:id="display" layoutX="49.0" layoutY="328.0" prefHeight="17.0" prefWidth="251.0" />
+      <Label fx:id="display" layoutX="48.0" layoutY="357.0" prefHeight="17.0" prefWidth="251.0" />
+      <Button layoutX="48.0" layoutY="324.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

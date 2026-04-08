@@ -21,4 +21,8 @@ public class SubmitQuestionPaperController
     @javafx.fxml.FXML
     public void submitButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

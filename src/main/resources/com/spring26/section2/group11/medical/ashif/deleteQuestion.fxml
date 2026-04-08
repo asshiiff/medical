@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashif.DeleteQuestionController">
    <children>
       <TableView fx:id="questionlistTable" layoutX="190.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0">
@@ -17,5 +16,6 @@
          </columnResizePolicy>
       </TableView>
       <Button layoutX="460.0" layoutY="232.0" mnemonicParsing="false" onAction="#deleteButton" text="Delete" />
+      <Button layoutX="52.0" layoutY="330.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

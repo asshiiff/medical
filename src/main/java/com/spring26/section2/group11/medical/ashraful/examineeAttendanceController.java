@@ -22,7 +22,7 @@ public class examineeAttendanceController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void attendanceTabButton(ActionEvent actionEvent) {
     }
 
@@ -32,5 +32,9 @@ public class examineeAttendanceController
 
     @javafx.fxml.FXML
     public void loadStudentListButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashif.AssignInvigilatorsController">
    <children>
       <ComboBox fx:id="invigilatorCB" layoutX="41.0" layoutY="33.0" prefWidth="150.0" promptText="Select Invigilator" />
@@ -21,6 +20,7 @@
          </columnResizePolicy>
       </TableView>
       <Button layoutX="496.0" layoutY="295.0" mnemonicParsing="false" onAction="#assignButton" text="Assign" />
-      <Label fx:id="display" layoutX="46.0" layoutY="312.0" prefHeight="17.0" prefWidth="205.0" />
+      <Label fx:id="display" layoutX="46.0" layoutY="346.0" prefHeight="17.0" prefWidth="205.0" />
+      <Button layoutX="46.0" layoutY="295.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

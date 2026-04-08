@@ -18,4 +18,8 @@ public class DeleteQuestionController
     @javafx.fxml.FXML
     public void deleteButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

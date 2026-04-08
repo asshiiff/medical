@@ -22,4 +22,8 @@ public class CreateQuestionPaperController
     @javafx.fxml.FXML
     public void addButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }

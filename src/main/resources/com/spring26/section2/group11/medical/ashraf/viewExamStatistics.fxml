@@ -5,11 +5,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashraful.viewExamStatisticsController">
    <children>
       <Button layoutX="39.0" layoutY="43.0" mnemonicParsing="false" onAction="#showDistributionButton" text="Show Distribution for Exam" />
       <Label layoutX="254.0" layoutY="47.0" text="Ongoing vs Completed vs Absent" />
       <PieChart fx:id="distributionPieChart" layoutX="39.0" layoutY="112.0" prefHeight="52.0" prefWidth="105.0" />
+      <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

@@ -5,10 +5,8 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashraful.generateApprovalListController">
    <children>
-      <Button fx:id="approvedApplicationsTab" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="92.0" text="Approved Applications" />
       <TableView fx:id="applicationsTable" layoutX="129.0" layoutY="31.0" prefHeight="202.0" prefWidth="463.0">
         <columns>
           <TableColumn fx:id="applicationsListCol" prefWidth="199.9490966796875" text="Applications List" />
@@ -18,5 +16,6 @@
          </columnResizePolicy>
       </TableView>
       <Button layoutX="129.0" layoutY="249.0" mnemonicParsing="false" onAction="#downloadListButton" text="Download List of Approved and Rejected Applications " />
+      <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

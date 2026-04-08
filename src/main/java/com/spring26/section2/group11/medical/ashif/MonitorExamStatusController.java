@@ -21,4 +21,8 @@ public class MonitorExamStatusController
     @javafx.fxml.FXML
     public void refreshButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }
