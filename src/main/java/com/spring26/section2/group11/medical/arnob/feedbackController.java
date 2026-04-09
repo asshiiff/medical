@@ -11,7 +11,7 @@ public class feedbackController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private ComboBox typeCB;
+    private ComboBox<String> typeCB;
     @javafx.fxml.FXML
     private Label display3;
     @javafx.fxml.FXML

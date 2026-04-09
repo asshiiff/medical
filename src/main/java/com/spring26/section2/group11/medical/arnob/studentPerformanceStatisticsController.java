@@ -10,7 +10,7 @@ public class studentPerformanceStatisticsController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private ComboBox subjectCB;
+    private ComboBox<String> subjectCB;
     @javafx.fxml.FXML
     private DatePicker toLocalDate;
     @javafx.fxml.FXML
@@ -26,9 +26,5 @@ public class studentPerformanceStatisticsController {
 
     @javafx.fxml.FXML
     public void statisticsButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
     }
 }
