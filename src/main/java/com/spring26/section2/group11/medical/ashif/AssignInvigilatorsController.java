@@ -15,15 +15,15 @@ import java.io.IOException;
 public class AssignInvigilatorsController
 {
     @javafx.fxml.FXML
-    private TableView invigilatorTable;
+    private TableView<Exam> invigilatorTable;
     @javafx.fxml.FXML
-    private TableColumn invigilatorListCol;
+    private TableColumn<Exam,String> invigilatorListCol;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
     private ComboBox<String> invigilatorCB;
     @javafx.fxml.FXML
-    private TableColumn examCenterCol;
+    private TableColumn<Exam,String> examCenterCol;
 
     @javafx.fxml.FXML
     public void initialize() {

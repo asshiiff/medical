@@ -15,11 +15,11 @@ import java.io.IOException;
 public class GenerateReportsController
 {
     @javafx.fxml.FXML
-    private TableView previousDataTable;
+    private TableView<Exam> previousDataTable;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableColumn previousDataCol;
+    private TableColumn<Exam,String> previousDataCol;
     @javafx.fxml.FXML
     private ComboBox<String> selectExamCB;
     @javafx.fxml.FXML

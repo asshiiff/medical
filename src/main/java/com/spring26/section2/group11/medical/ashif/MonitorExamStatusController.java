@@ -16,9 +16,9 @@ public class MonitorExamStatusController
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableView examlistTable;
+    private TableView<Exam> examlistTable;
     @javafx.fxml.FXML
-    private TableColumn examlistCol;
+    private TableColumn<Exam,String> examlistCol;
 
     @javafx.fxml.FXML
     public void initialize() {

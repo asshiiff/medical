@@ -14,11 +14,11 @@ import java.io.IOException;
 public class CategorizeQuestionsController
 {
     @javafx.fxml.FXML
-    private TableColumn questionsCol;
+    private TableColumn<Exam,String> questionsCol;
     @javafx.fxml.FXML
     private ComboBox<String> categoryCB;
     @javafx.fxml.FXML
-    private TableView questionsTable;
+    private TableView<Exam> questionsTable;
 
     @javafx.fxml.FXML
     public void initialize() {
