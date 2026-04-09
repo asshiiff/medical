@@ -6,6 +6,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 
+import java.time.LocalDate;
+
 public class viewExamScheduleController {
     @javafx.fxml.FXML
     private Label display1;
@@ -15,8 +17,6 @@ public class viewExamScheduleController {
     private TableColumn examNameCol;
     @javafx.fxml.FXML
     private TableView examTable;
-    @javafx.fxml.FXML
-    private TableColumn timeCol;
     @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML

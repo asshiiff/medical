@@ -19,7 +19,6 @@
         <columns>
           <TableColumn fx:id="examNameCol" prefWidth="75.0" text="Exam Name " />
           <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
-            <TableColumn fx:id="timeCol" prefWidth="75.0" text="Time" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

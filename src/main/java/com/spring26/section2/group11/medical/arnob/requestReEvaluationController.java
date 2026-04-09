@@ -10,7 +10,7 @@ public class requestReEvaluationController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private ComboBox selectExamCB;
+    private ComboBox<String> selectExamCB;
     @javafx.fxml.FXML
     private Label display3;
     @javafx.fxml.FXML

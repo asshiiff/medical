@@ -10,9 +10,9 @@ public class SubmitQuestionPaperController
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableView<QuestionSetter> questionPapersTable;
+    private TableView questionPapersTable;
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> questionPaperCol;
+    private TableColumn questionPaperCol;
 
     @javafx.fxml.FXML
     public void initialize() {

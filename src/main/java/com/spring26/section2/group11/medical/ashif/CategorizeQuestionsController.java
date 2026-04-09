@@ -8,11 +8,11 @@ import javafx.scene.control.TableView;
 public class CategorizeQuestionsController
 {
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> questionsCol;
+    private TableColumn questionsCol;
     @javafx.fxml.FXML
     private ComboBox<String> categoryCB;
     @javafx.fxml.FXML
-    private TableView<QuestionSetter> questionsTable;
+    private TableView questionsTable;
 
     @javafx.fxml.FXML
     public void initialize() {

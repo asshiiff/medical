@@ -5,7 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class ViewexamresultsanddownloadPDFController {
+public class ViewexamresultsController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
@@ -15,8 +15,6 @@ public class ViewexamresultsanddownloadPDFController {
     @javafx.fxml.FXML
     private TableColumn subjectCol;
     @javafx.fxml.FXML
-    private Label display2;
-    @javafx.fxml.FXML
     private TableView viewResultTable;
     @javafx.fxml.FXML
     private TableColumn totalCol;
@@ -25,7 +23,7 @@ public class ViewexamresultsanddownloadPDFController {
     public void viewResultButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void downloadPdfButton(ActionEvent actionEvent) {
     }
 

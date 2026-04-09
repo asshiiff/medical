@@ -9,11 +9,11 @@ import javafx.scene.control.TableView;
 public class GenerateReportsController
 {
     @javafx.fxml.FXML
-    private TableView<ExamController> previousDataTable;
+    private TableView previousDataTable;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableColumn<ExamController,String> previousDataCol;
+    private TableColumn previousDataCol;
     @javafx.fxml.FXML
     private ComboBox<String> selectExamCB;
     @javafx.fxml.FXML

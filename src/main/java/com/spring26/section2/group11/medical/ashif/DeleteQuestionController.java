@@ -7,9 +7,9 @@ import javafx.scene.control.TableView;
 public class DeleteQuestionController
 {
     @javafx.fxml.FXML
-    private TableView<QuestionSetter> questionlistTable;
+    private TableView questionlistTable;
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> questionList;
+    private TableColumn questionList;
 
     @javafx.fxml.FXML
     public void initialize() {
