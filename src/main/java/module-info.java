@@ -5,7 +5,6 @@ module com.spring26.section2.group11.medical {
     requires java.desktop;
 
 
-
     opens com.spring26.section2.group11.medical to javafx.fxml;
     exports com.spring26.section2.group11.medical;
     exports com.spring26.section2.group11.medical.ashraful;
