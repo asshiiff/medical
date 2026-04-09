@@ -8,17 +8,17 @@ import javafx.scene.control.TableView;
 public class incidentReportController
 {
     @javafx.fxml.FXML
-    private ComboBox incidentCB;
+    private ComboBox<String> incidentCB;
     @javafx.fxml.FXML
-    private ComboBox selectStudentCB;
+    private ComboBox<String> selectStudentCB;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
+    private ComboBox<String> examCB;
     @javafx.fxml.FXML
-    private TableColumn studentIdCol;
+    private TableView<Candidate> studentTable;
     @javafx.fxml.FXML
-    private ComboBox examCB;
+    private TableColumn<Candidate, Integer> candidateIdCol;
     @javafx.fxml.FXML
-    private TableView studentTable;
+    private TableColumn<Candidate, String> canidateNameCol;
 
     @javafx.fxml.FXML
     public void initialize() {

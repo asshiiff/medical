@@ -16,7 +16,7 @@ public class createExamController
     @javafx.fxml.FXML
     private TextField examNameField;
     @javafx.fxml.FXML
-    private ComboBox selectSubjectCB;
+    private ComboBox<String> selectSubjectCB;
 
     @javafx.fxml.FXML
     public void initialize() {

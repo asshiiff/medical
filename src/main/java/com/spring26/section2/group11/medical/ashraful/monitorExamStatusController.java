@@ -9,15 +9,15 @@ import javafx.scene.control.TableView;
 public class monitorExamStatusController
 {
     @javafx.fxml.FXML
-    private TableView candidateTable;
+    private TableView<Candidate> candidateTable;
     @javafx.fxml.FXML
-    private TableColumn candidateIdCol;
+    private TableColumn<Candidate, Integer> candidateIdCol;
     @javafx.fxml.FXML
-    private TableColumn candidateNameCol;
+    private TableColumn<Candidate, String> candidateNameCol;
     @javafx.fxml.FXML
-    private ComboBox selectCandidateCB;
+    private ComboBox<String> selectCandidateCB;
     @javafx.fxml.FXML
-    private TableColumn candidateStatusCol;
+    private TableColumn<Candidate, String> candidateStatusCol;
     @javafx.fxml.FXML
     private CheckBox examCompletedCheckBox;
 

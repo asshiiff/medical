@@ -8,9 +8,9 @@ import javafx.scene.control.TableView;
 public class generateApprovalListController
 {
     @javafx.fxml.FXML
-    private TableView applicationsTable;
+    private TableView<Applications> applicationsTable;
     @javafx.fxml.FXML
-    private TableColumn applicationsListCol;
+    private TableColumn<Applications, String> applicationsListCol;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -8,11 +8,11 @@ import javafx.scene.control.TableView;
 public class approveApplicationController
 {
     @javafx.fxml.FXML
-    private TableView applicationsTable;
+    private TableView<Applications> applicationsTable;
     @javafx.fxml.FXML
-    private ComboBox examsCB;
+    private ComboBox<String> examsCB;
     @javafx.fxml.FXML
-    private TableColumn applicationsCol;
+    private TableColumn<Applications, String> applicationsCol;
 
     @javafx.fxml.FXML
     public void initialize() {

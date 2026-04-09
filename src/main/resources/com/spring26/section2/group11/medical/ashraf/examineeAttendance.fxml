@@ -11,8 +11,8 @@
       <ComboBox fx:id="examsCB" layoutX="149.0" layoutY="46.0" prefWidth="150.0" promptText="Exams" />
       <TableView fx:id="attendanceTable" layoutX="150.0" layoutY="100.0" prefHeight="202.0" prefWidth="432.0">
         <columns>
-          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
-          <TableColumn fx:id="studentIdCol" prefWidth="75.0" text="Student ID" />
+          <TableColumn fx:id="candidateNameCol" prefWidth="75.0" text="Candidate Name" />
+          <TableColumn fx:id="candidateIdCol" prefWidth="75.0" text="Candidate ID" />
             <TableColumn fx:id="attendanceCol" prefWidth="75.0" text="Attendance" />
         </columns>
          <columnResizePolicy>

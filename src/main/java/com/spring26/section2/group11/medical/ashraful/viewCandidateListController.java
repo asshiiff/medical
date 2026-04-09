@@ -7,13 +7,13 @@ import javafx.scene.control.TableView;
 public class viewCandidateListController
 {
     @javafx.fxml.FXML
-    private TableView candidateTable;
+    private TableView<Candidate> candidateTable;
     @javafx.fxml.FXML
-    private TableColumn candidateIdCol;
+    private TableColumn<Candidate, Integer> candidateIdCol;
     @javafx.fxml.FXML
-    private TableColumn candidateNameCol;
+    private TableColumn<Candidate, String> candidateNameCol;
     @javafx.fxml.FXML
-    private TableColumn candidateExamCol;
+    private TableColumn<Candidate, String> candidateExamCol;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -7,13 +7,13 @@ import javafx.scene.control.TableView;
 public class viewSeatingArrangementController
 {
     @javafx.fxml.FXML
-    private TableView candidateTable;
+    private TableView<Candidate> candidateTable;
     @javafx.fxml.FXML
-    private TableColumn candidateIdCol;
+    private TableColumn<Candidate, Integer> candidateIdCol;
     @javafx.fxml.FXML
-    private TableColumn candidateNameCol;
+    private TableColumn<Candidate, String> candidateNameCol;
     @javafx.fxml.FXML
-    private TableColumn candidateSeatCol;
+    private TableColumn<Candidate, String> candidateSeatCol;
 
     @javafx.fxml.FXML
     public void initialize() {

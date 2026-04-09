@@ -6,18 +6,20 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.util.jar.Attributes;
+
 public class reviewExamResultsController
 {
     @javafx.fxml.FXML
-    private TableColumn studentNameCol;
+    private TableColumn<Candidate, String> studentNameCol;
     @javafx.fxml.FXML
-    private TableColumn scoreCol;
+    private TableColumn<Candidate, Integer> scoreCol;
     @javafx.fxml.FXML
     private PieChart passFailPercentPieChart;
     @javafx.fxml.FXML
-    private ComboBox selectExamCB;
+    private ComboBox<String> selectExamCB;
     @javafx.fxml.FXML
-    private TableView resultsTable;
+    private TableView<Candidate> resultsTable;
 
     @javafx.fxml.FXML
     public void initialize() {
