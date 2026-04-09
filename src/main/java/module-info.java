@@ -9,4 +9,7 @@ module com.spring26.section2.group11.medical {
     exports com.spring26.section2.group11.medical;
     exports com.spring26.section2.group11.medical.ashraful;
     opens com.spring26.section2.group11.medical.ashraful to javafx.fxml;
+    opens com.spring26.section2.group11.medical.ashif to javafx.fxml;
+    opens com.spring26.section2.group11.medical.arnob to javafx.fxml;
+
 }
