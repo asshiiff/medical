@@ -8,15 +8,15 @@ import javafx.scene.control.TableView;
 public class AnalyzeQuestionDistributionController
 {
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> typeCol;
+    private TableColumn typeCol;
     @javafx.fxml.FXML
-    private TableView<QuestionSetter> questionDistributionTable;
+    private TableView questionDistributionTable;
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> eventCol;
+    private TableColumn eventCol;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> descriptionCol;
+    private TableColumn descriptionCol;
 
     @javafx.fxml.FXML
     public void initialize() {

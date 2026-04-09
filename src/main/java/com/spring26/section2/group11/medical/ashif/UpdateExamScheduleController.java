@@ -10,11 +10,11 @@ public class UpdateExamScheduleController
     @javafx.fxml.FXML
     private DatePicker datePicker;
     @javafx.fxml.FXML
-    private TableView<ExamController> examlistTable;
+    private TableView examlistTable;
     @javafx.fxml.FXML
     private ComboBox<String> examCB;
     @javafx.fxml.FXML
-    private TableColumn<ExamController,String> examlistCol;
+    private TableColumn examlistCol;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashif.ExamControllerDashboardController">
+   <children>
+      <Label fx:id="examControllerDashboardLabel" layoutX="41.0" layoutY="78.0" prefHeight="201.0" prefWidth="341.0" text="    Exam Controller Dashboard ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="412.0" layoutY="29.0" mnemonicParsing="false" onAction="#dateAndTimeForExamButton" text="Set Date and Time for Exam" />
+      <Button layoutX="412.0" layoutY="65.0" mnemonicParsing="false" onAction="#centerForExamButton" text="Set Center for Exam" />
+      <Button layoutX="412.0" layoutY="106.0" mnemonicParsing="false" onAction="#publishExamScheduleButton" text="Publish Exam Schedule" />
+      <Button layoutX="412.0" layoutY="147.0" mnemonicParsing="false" onAction="#updateExamScheduleButton" text="Update Exam Schedule" />
+      <Button layoutX="412.0" layoutY="187.0" mnemonicParsing="false" onAction="#assignInvigilatorsButton" text="Assign Invigilators" />
+      <Button layoutX="412.0" layoutY="222.0" mnemonicParsing="false" onAction="#monitorExamStatusButton" text="Monitor Exam Status" />
+      <Button layoutX="412.0" layoutY="253.0" mnemonicParsing="false" onAction="#generateReportsButton" text="Generate Reports" />
+      <Button layoutX="412.0" layoutY="290.0" mnemonicParsing="false" onAction="#cancelResheduleExamButton" text="Cancel / Reshedule Exam" />
+      <Button layoutX="41.0" layoutY="333.0" mnemonicParsing="false" onAction="#logOutButton" text="log out" />
+   </children>
+</AnchorPane>

@@ -9,15 +9,15 @@ import javafx.scene.control.TableView;
 public class AssignInvigilatorsController
 {
     @javafx.fxml.FXML
-    private TableView<ExamController> invigilatorTable;
+    private TableView invigilatorTable;
     @javafx.fxml.FXML
-    private TableColumn<ExamController,String> invigilatorListCol;
+    private TableColumn invigilatorListCol;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
     private ComboBox<String> invigilatorCB;
     @javafx.fxml.FXML
-    private TableColumn<ExamController,String> examCenterCol;
+    private TableColumn examCenterCol;
 
     @javafx.fxml.FXML
     public void initialize() {

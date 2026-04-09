@@ -11,9 +11,9 @@ public class EditQuestionPaperController
     @javafx.fxml.FXML
     private ComboBox<String> difficultyCB;
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> questionListCol;
+    private TableColumn questionListCol;
     @javafx.fxml.FXML
-    private TableView<QuestionSetter> questionListTable;
+    private TableView questionListTable;
     @javafx.fxml.FXML
     private TextArea textArea;
 

@@ -8,13 +8,13 @@ public class SaveQuestionBankController
     @javafx.fxml.FXML
     private ComboBox<String> subjectCB;
     @javafx.fxml.FXML
-    private TableColumn<QuestionSetter,String> questionCol;
+    private TableColumn questionCol;
     @javafx.fxml.FXML
     private ComboBox<String> difficultyCB;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableView<QuestionSetter> questionTable;
+    private TableView questionTable;
     @javafx.fxml.FXML
     private TextArea textArea;
 
