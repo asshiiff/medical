@@ -1,7 +1,14 @@
 package com.spring26.section2.group11.medical.ashif;
 
+import com.spring26.section2.group11.medical.HelloApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import javax.imageio.IIOException;
+import java.io.IOException;
 
 public class ExamControllerDashboardController
 {
@@ -13,7 +20,14 @@ public class ExamControllerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void cancelResheduleExamButton(ActionEvent actionEvent) {
+    public void cancelResheduleExamButton(ActionEvent actionEvent) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/cancelResheduleExam.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) examControllerDashboardLabel.getScene().getWindow();
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
