@@ -14,13 +14,13 @@ import java.io.IOException;
 public class CreateQuestionPaperController
 {
     @javafx.fxml.FXML
-    private TableView quesstionPaperTable;
+    private TableView<Exam> quesstionPaperTable;
     @javafx.fxml.FXML
-    private TableColumn totalScoreCol;
+    private TableColumn<Exam,Integer> totalScoreCol;
     @javafx.fxml.FXML
-    private TableColumn marksCol;
+    private TableColumn<Exam,Integer> marksCol;
     @javafx.fxml.FXML
-    private TableColumn rankCol;
+    private TableColumn<Exam,String> rankCol;
     @javafx.fxml.FXML
     private Label display;
 

@@ -14,9 +14,9 @@ import java.io.IOException;
 public class DeleteQuestionController
 {
     @javafx.fxml.FXML
-    private TableView questionlistTable;
+    private TableView<Exam> questionlistTable;
     @javafx.fxml.FXML
-    private TableColumn questionList;
+    private TableColumn<Exam,String> questionList;
     @javafx.fxml.FXML
     private Label display;
 
