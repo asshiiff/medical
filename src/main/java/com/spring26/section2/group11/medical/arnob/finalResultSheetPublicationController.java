@@ -15,25 +15,29 @@ public class finalResultSheetPublicationController {
     @javafx.fxml.FXML
     private DatePicker toLocalDate;
     @javafx.fxml.FXML
-    private TableColumn idCol;
+    private TableColumn<Student, Integer> marksCol;
     @javafx.fxml.FXML
-    private TableColumn marksCol;
-    @javafx.fxml.FXML
-    private TableView resultTable;
+    private TableView<Student> resultTable;
     @javafx.fxml.FXML
     private Label display3;
     @javafx.fxml.FXML
-    private ComboBox examCB;
+    private ComboBox<String> examCB;
     @javafx.fxml.FXML
     private DatePicker rangeLocalDate;
     @javafx.fxml.FXML
-    private TableColumn gradeCol;
+    private TableColumn<Student, String> gradeCol;
     @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML
     private Label display5;
     @javafx.fxml.FXML
     private Label display4;
+    @javafx.fxml.FXML
+    private TableColumn<Student,Integer> studentIdCol;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void publishButton(ActionEvent actionEvent) {

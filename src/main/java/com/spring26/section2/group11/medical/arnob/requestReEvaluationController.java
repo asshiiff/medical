@@ -27,6 +27,10 @@ public class requestReEvaluationController {
     private Label display4;
 
     @javafx.fxml.FXML
+    public void initialize() {
+    }
+
+    @javafx.fxml.FXML
     public void submitRequestButton(ActionEvent actionEvent) {
     }
 

@@ -11,7 +11,7 @@
    <children>
       <TableView fx:id="paymentTable" layoutY="76.0" prefHeight="143.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="iDCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="studentIdCol" prefWidth="75.0" text="Student ID" />
           <TableColumn fx:id="amountCol" prefWidth="75.0" text="Amount" />
             <TableColumn fx:id="statusCol" prefWidth="75.0" text="Status" />
         </columns>

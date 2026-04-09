@@ -17,15 +17,19 @@ public class viewExamScheduleController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableColumn dateCol;
+    private TableColumn<Student, LocalDate> dateCol;
     @javafx.fxml.FXML
-    private TableColumn examNameCol;
-    @javafx.fxml.FXML
-    private TableView examTable;
+    private TableView<Student> examTable;
     @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML
     private TextArea detailsArea;
+    @javafx.fxml.FXML
+    private TableColumn<Student, String> subjectCol;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void nextButton(ActionEvent actionEvent) {

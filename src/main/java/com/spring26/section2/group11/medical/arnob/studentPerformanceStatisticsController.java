@@ -31,6 +31,10 @@ public class studentPerformanceStatisticsController {
     private Label display4;
 
     @javafx.fxml.FXML
+    public void initialize() {
+    }
+
+    @javafx.fxml.FXML
     public void statisticsButton(ActionEvent actionEvent) {
     }
 

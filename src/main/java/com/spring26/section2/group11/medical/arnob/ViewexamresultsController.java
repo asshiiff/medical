@@ -15,15 +15,19 @@ public class ViewexamresultsController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableColumn marksCol;
+    private TableColumn<Student, Integer> marksCol;
     @javafx.fxml.FXML
-    private TableColumn rankCol;
+    private TableColumn<Student,String> rankCol;
     @javafx.fxml.FXML
-    private TableColumn subjectCol;
+    private TableColumn<Student,String> subjectCol;
     @javafx.fxml.FXML
-    private TableView viewResultTable;
+    private TableView<Student> viewResultTable;
     @javafx.fxml.FXML
-    private TableColumn totalCol;
+    private TableColumn<Student,Integer> totalCol;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void viewResultButton(ActionEvent actionEvent) {

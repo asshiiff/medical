@@ -20,23 +20,27 @@ public class handleReEvaluationRequestController {
     @javafx.fxml.FXML
     private TextField requestMarksField;
     @javafx.fxml.FXML
-    private TableColumn marksCol;
+    private TableColumn<Student, Integer> marksCol;
     @javafx.fxml.FXML
-    private TableColumn statusCol;
-    @javafx.fxml.FXML
-    private TableColumn examCol;
+    private TableColumn<Student, String> statusCol;
     @javafx.fxml.FXML
     private TextField currentMarksField;
     @javafx.fxml.FXML
-    private ComboBox statusCB;
+    private ComboBox<String> statusCB;
     @javafx.fxml.FXML
-    private TableColumn studentIdCol;
-    @javafx.fxml.FXML
-    private ComboBox selectExamCB;
+    private TableColumn<Student, Integer> studentIdCol;
     @javafx.fxml.FXML
     private TextField reasonField;
     @javafx.fxml.FXML
     private Label display2;
+    @javafx.fxml.FXML
+    private TableColumn<Student, String> subjectCol;
+    @javafx.fxml.FXML
+    private ComboBox<String> selectSubjectCB;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void updateButton(ActionEvent actionEvent) {

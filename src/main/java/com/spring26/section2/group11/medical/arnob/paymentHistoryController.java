@@ -13,17 +13,21 @@ import java.io.IOException;
 
 public class paymentHistoryController {
     @javafx.fxml.FXML
-    private TableColumn iDCol;
-    @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableColumn amountCol;
+    private TableColumn<Student,Integer> amountCol;
     @javafx.fxml.FXML
-    private TableColumn statusCol;
+    private TableColumn<Student, String> statusCol;
     @javafx.fxml.FXML
-    private TableView paymentTable;
+    private TableView<Student> paymentTable;
     @javafx.fxml.FXML
     private Label display2;
+    @javafx.fxml.FXML
+    private TableColumn<Student, Integer> studentIdCol;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void payButton(ActionEvent actionEvent) {

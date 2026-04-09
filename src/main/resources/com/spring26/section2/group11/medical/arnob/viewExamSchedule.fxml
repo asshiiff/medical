@@ -17,7 +17,7 @@
       </Label>
       <TableView fx:id="examTable" layoutX="-1.0" layoutY="52.0" prefHeight="157.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="examNameCol" prefWidth="75.0" text="Exam Name " />
+          <TableColumn fx:id="subjectCol" prefWidth="75.0" text="Subject" />
           <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
         </columns>
          <columnResizePolicy>
