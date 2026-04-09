@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class invigilatorDashboardController
+public class medicalCollegeAuthorityDashboardController
 {
     @javafx.fxml.FXML
     private Label dashboardLabel;
@@ -31,8 +31,8 @@ public class invigilatorDashboardController
     }
 
     @javafx.fxml.FXML
-    public void attendanceButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/examineeAttendance.fxml"));
+    public void approveApplicationsButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) dashboardLabel.getScene().getWindow();
@@ -43,30 +43,7 @@ public class invigilatorDashboardController
     }
 
     @javafx.fxml.FXML
-    public void reportIncidentButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/incidentReport.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-
-        Stage stage = (Stage) dashboardLabel.getScene().getWindow();
-
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @javafx.fxml.FXML
-    public void monitorExamStatusButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/monitorExamStatus.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-
-        Stage stage = (Stage) dashboardLabel.getScene().getWindow();
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @javafx.fxml.FXML
-    public void verifyCandidateButton(ActionEvent actionEvent) throws IOException {
+    public void createNewExamButton(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
@@ -79,7 +56,7 @@ public class invigilatorDashboardController
 
     @javafx.fxml.FXML
     public void logOutButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/invigilatorDashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) dashboardLabel.getScene().getWindow();
@@ -90,8 +67,8 @@ public class invigilatorDashboardController
     }
 
     @javafx.fxml.FXML
-    public void checkSeatingButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/viewSeatingArrangement.fxml"));
+    public void reviewExamResultsButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) dashboardLabel.getScene().getWindow();
@@ -102,8 +79,8 @@ public class invigilatorDashboardController
     }
 
     @javafx.fxml.FXML
-    public void faqButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/viewFAQ.fxml"));
+    public void enableDisableExamButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) dashboardLabel.getScene().getWindow();
@@ -114,8 +91,32 @@ public class invigilatorDashboardController
     }
 
     @javafx.fxml.FXML
-    public void examStatisticsButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/viewExamStatistics.fxml"));
+    public void approvalMetricsButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) dashboardLabel.getScene().getWindow();
+
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void viewFaqButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) dashboardLabel.getScene().getWindow();
+
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void viewGuidelinesButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) dashboardLabel.getScene().getWindow();

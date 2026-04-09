@@ -36,7 +36,7 @@ public class AssignInvigilatorsController
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/assignInvigilators.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/examControllerDashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) display .getScene().getWindow();
         stage.setTitle("Hello!");
