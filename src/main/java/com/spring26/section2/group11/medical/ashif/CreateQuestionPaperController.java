@@ -7,13 +7,13 @@ import javafx.scene.control.TableView;
 public class CreateQuestionPaperController
 {
     @javafx.fxml.FXML
-    private TableView quesstionPaperTable;
+    private TableView<QuestionSetter> quesstionPaperTable;
     @javafx.fxml.FXML
-    private TableColumn totalScoreCol;
+    private TableColumn<QuestionSetter,String> totalScoreCol;
     @javafx.fxml.FXML
-    private TableColumn marksCol;
+    private TableColumn<QuestionSetter,String> marksCol;
     @javafx.fxml.FXML
-    private TableColumn rankCol;
+    private TableColumn<QuestionSetter,String> rankCol;
 
     @javafx.fxml.FXML
     public void initialize() {

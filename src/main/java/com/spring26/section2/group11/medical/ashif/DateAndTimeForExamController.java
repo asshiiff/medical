@@ -7,7 +7,7 @@ import javafx.scene.control.DatePicker;
 public class DateAndTimeForExamController
 {
     @javafx.fxml.FXML
-    private ComboBox timeCB;
+    private ComboBox<String> timeCB;
     @javafx.fxml.FXML
     private DatePicker datePicker;
 
