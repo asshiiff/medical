@@ -29,14 +29,32 @@ public class UpdateExamScheduleController
 
     @javafx.fxml.FXML
     public void initialize() {
+
         examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+
         examCB.getItems().addAll("DBMS","DS","DLD");
 
+        examList.add(new Exam("DBMS"));
+        examList.add(new Exam("DS"));
 
+        examlistTable.getItems().addAll(examList);
     }
 
     @javafx.fxml.FXML
     public void updateButton(ActionEvent actionEvent) {
+
+        Exam selected = examlistTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null || examCB.getValue() == null || datePicker.getValue() == null) {
+            display.setText("Select exam and date!");
+            return;
+        }
+
+        selected.setExam(examCB.getValue() + " | " + datePicker.getValue());
+
+        examlistTable.refresh();
+
+        display.setText("Updated!");
     }
 
     @javafx.fxml.FXML

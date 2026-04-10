@@ -17,6 +17,13 @@ public class ExamControllerDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        examControllerDashboardLabel.setText("Welcome to Exam Controller Dashboard");
+
+        String username = "Exam Controller";
+        examControllerDashboardLabel.setText("Welcome, " + username);
+
+
     }
 
     @javafx.fxml.FXML
@@ -110,7 +117,17 @@ public class ExamControllerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void logOutButton(ActionEvent actionEvent) {
+    public void logOutButton(ActionEvent actionEvent) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(
+                HelloApplication.class.getResource("/com/spring26/section2/group11/medical/login.fxml")
+        );
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) examControllerDashboardLabel.getScene().getWindow();
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
 
 
     }

@@ -30,7 +30,15 @@ public class CancelResheduleExamController
     @javafx.fxml.FXML
     public void initialize() {
 
-        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("category"));
+        newTimeCB.getItems().addAll("9:00 AM", "12:00 PM", "3:00 PM");
+
+
+        examList.add(new Exam("Math Exam"));
+        examList.add(new Exam("Physics Exam"));
+        examList.add(new Exam("Chemistry Exam"));
+
+        examlistTable.getItems().addAll(examList);
 
     }
 
@@ -39,13 +47,22 @@ public class CancelResheduleExamController
 
         Exam selectedExam = examlistTable.getSelectionModel().getSelectedItem();
 
+        if (selectedExam == null) {
+            display.setText("Please select an exam first!");
+            return;
+        }
+
+        if (datePicker.getValue() == null || newTimeCB.getValue() == null) {
+            display.setText("Select date and time!");
+            return;
+        }
+
         selectedExam.setExam(
                 selectedExam.getExam() + " | " + datePicker.getValue() + " | " + newTimeCB.getValue()
         );
 
         examlistTable.refresh();
-
-        display.setText("Rescheduled!");
+        display.setText("Rescheduled successfully!");
 
     }
 

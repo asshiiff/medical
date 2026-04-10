@@ -16,6 +16,15 @@ public class QuestionSetterDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        questionSetterDashboardLabel.setText("Welcome to Question Setter Dashboard");
+
+
+        String username = "Ashif";
+        questionSetterDashboardLabel.setText("Welcome, " + username);
+
+
+
     }
 
     @javafx.fxml.FXML
@@ -31,7 +40,7 @@ public class QuestionSetterDashboardController
     @javafx.fxml.FXML
     public void createQuestionPaperButton(ActionEvent actionEvent) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/questionPaper.fxml.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/questionPaper.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) questionSetterDashboardLabel.getScene().getWindow();
         stage.setTitle("Hello!");
@@ -52,9 +61,26 @@ public class QuestionSetterDashboardController
 
     }
 
+
+
     @javafx.fxml.FXML
-    public void logOutButton(ActionEvent actionEvent) {
+    public void logOutButton(ActionEvent actionEvent) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(
+                HelloApplication.class.getResource("/com/spring26/section2/group11/medical/login.fxml")
+        );
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) questionSetterDashboardLabel.getScene().getWindow();
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+
+
     }
+
+
+
 
     @javafx.fxml.FXML
     public void previewQuestionPaperButton(ActionEvent actionEvent) throws IOException {
