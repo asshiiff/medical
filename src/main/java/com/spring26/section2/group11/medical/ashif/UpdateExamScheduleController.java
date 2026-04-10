@@ -15,8 +15,6 @@ import java.util.List;
 public class UpdateExamScheduleController
 {
     @javafx.fxml.FXML
-    private Label display;
-    @javafx.fxml.FXML
     private DatePicker datePicker;
     @javafx.fxml.FXML
     private TableView<Exam> examlistTable;
@@ -26,6 +24,8 @@ public class UpdateExamScheduleController
     private TableColumn<Exam,String> examlistCol;
 
     List<Exam> examList = new ArrayList<>();
+    @javafx.fxml.FXML
+    private Label emptyLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -46,7 +46,7 @@ public class UpdateExamScheduleController
         Exam selected = examlistTable.getSelectionModel().getSelectedItem();
 
         if (selected == null || examCB.getValue() == null || datePicker.getValue() == null) {
-            display.setText("Select exam and date!");
+            emptyLabel.setText("Updated Exam and Date!");
             return;
         }
 
@@ -54,7 +54,7 @@ public class UpdateExamScheduleController
 
         examlistTable.refresh();
 
-        display.setText("Updated!");
+        emptyLabel.setText("Updated Exam and Date!");
     }
 
     @javafx.fxml.FXML
@@ -62,7 +62,7 @@ public class UpdateExamScheduleController
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/examControllerDashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = (Stage) display .getScene().getWindow();
+        Stage stage = (Stage) emptyLabel.getScene().getWindow();
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
