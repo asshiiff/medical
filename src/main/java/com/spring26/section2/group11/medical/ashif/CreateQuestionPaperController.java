@@ -42,9 +42,7 @@ public class CreateQuestionPaperController
         quesstionPaperTable.getItems().addAll(examList);
     }
 
-    @javafx.fxml.FXML
-    public void addButton(ActionEvent actionEvent) {
-    }
+
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
@@ -55,5 +53,9 @@ public class CreateQuestionPaperController
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void saveButton(ActionEvent actionEvent) {
     }
 }

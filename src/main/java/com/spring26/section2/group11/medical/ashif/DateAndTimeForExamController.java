@@ -19,6 +19,8 @@ public class DateAndTimeForExamController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        timeCB.getItems().addAll("Morning","Day","Afternoon","Evening");
     }
 
     @javafx.fxml.FXML
