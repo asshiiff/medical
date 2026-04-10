@@ -14,24 +14,27 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Button layoutX="231.0" layoutY="77.0" mnemonicParsing="false" onAction="#generateRankingButton" text="Generate Ranking" />
-      <Label fx:id="display2" layoutX="239.0" layoutY="404.0" prefHeight="20.0" prefWidth="171.0" text="Exam Ranking Successfully">
+      <Button layoutX="482.0" layoutY="83.0" mnemonicParsing="false" onAction="#generateRankingButton" text="Generate Ranking" />
+      <Label fx:id="successfullyLabel" layoutX="239.0" layoutY="415.0" prefHeight="20.0" prefWidth="171.0" textFill="#d01818">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TableView fx:id="rankTable" layoutY="149.0" prefHeight="200.0" prefWidth="649.0">
+      <TableView fx:id="rankTable" layoutX="2.0" layoutY="124.0" prefHeight="200.0" prefWidth="458.0">
         <columns>
           <TableColumn fx:id="rankCol" prefWidth="75.0" text="Rank" />
           <TableColumn fx:id="studentNameCol" prefWidth="75.0" text="Student Name" />
-            <TableColumn fx:id="studentIDCol" prefWidth="75.0" text="Student ID" />
+            <TableColumn fx:id="studentIdCol" prefWidth="75.0" text="Student ID" />
             <TableColumn fx:id="marksCol" prefWidth="75.0" text="Marks" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="79.0" layoutY="361.0" mnemonicParsing="false" onAction="#saveRankingButton" text="Save Ranking" />
-      <Button layoutX="89.0" layoutY="424.0" mnemonicParsing="false" onAction="#backButton" prefHeight="25.0" prefWidth="54.0" text="Back" />
+      <Button layoutX="257.0" layoutY="365.0" mnemonicParsing="false" onAction="#saveRankingButton" prefHeight="31.0" prefWidth="87.0" text="Save Ranking" />
+      <Button layoutX="14.0" layoutY="435.0" mnemonicParsing="false" onAction="#backButton" prefHeight="25.0" prefWidth="54.0" text="Back" />
+      <Label fx:id="generateRankingLabel" layoutX="474.0" layoutY="148.0" prefHeight="38.0" prefWidth="157.0" />
+      <Label layoutX="493.0" layoutY="55.0" text="Press The Button" textFill="#d71212" />
+      <Button layoutX="527.0" layoutY="368.0" mnemonicParsing="false" onAction="#refreshButton" text="Refresh" />
    </children>
 </AnchorPane>

@@ -5,17 +5,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class manageAnswerKeyController {
     @javafx.fxml.FXML
     private TextField answerKeyField;
-    @javafx.fxml.FXML
-    private ComboBox<String> courseCB;
-    @javafx.fxml.FXML
-    private ComboBox<String> semesterCB;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
@@ -24,13 +23,38 @@ public class manageAnswerKeyController {
     private TableColumn<Course,String> courseCol;
     @javafx.fxml.FXML
     private TableColumn<Course,String> answerKeyCol;
+    @javafx.fxml.FXML
+    private TextField courseField;
+
+    List<Course> courseList = new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
 
+
+
+        courseCol.setCellValueFactory( new PropertyValueFactory<>("course"));
+        answerKeyCol.setCellValueFactory( new PropertyValueFactory<>("answerKey"));
+
+        courseList.add( new Course("Math","A B D C"));
+        courseList.add( new Course("Physics","B D E F"));
+        courseList.add( new Course("Chemistry","C B A F"));
+
+        answerTable.getItems().addAll(courseList);
+
+
+    }
     @javafx.fxml.FXML
     public void saveButton(ActionEvent actionEvent) {
+
+        String course = courseField.getText();
+        String answerKey = answerKeyField.getText();
+
+        Course c = new Course(course,answerKey);
+
+        answerTable.getItems().add(c);
+
     }
 
     @javafx.fxml.FXML

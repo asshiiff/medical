@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -16,7 +15,7 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <TableView fx:id="answerTable" layoutY="66.0" prefHeight="200.0" prefWidth="359.0">
+      <TableView fx:id="answerTable" layoutY="66.0" prefHeight="200.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="courseCol" prefWidth="75.0" text="Course" />
           <TableColumn fx:id="answerKeyCol" prefWidth="75.0" text="Answer Key" />
@@ -25,11 +24,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ComboBox fx:id="courseCB" layoutX="379.0" layoutY="97.0" prefWidth="150.0" promptText="Course" />
-      <ComboBox fx:id="semesterCB" layoutX="379.0" layoutY="141.0" prefWidth="150.0" promptText="Semester" />
-      <TextField fx:id="answerKeyField" layoutX="380.0" layoutY="200.0" promptText="Answer Key" />
-      <Button layoutX="281.0" layoutY="299.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="31.0" prefWidth="67.0" text="Save" />
-      <Label layoutX="301.0" layoutY="356.0" text="Successful" />
-      <Button layoutX="28.0" layoutY="330.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <TextField fx:id="answerKeyField" layoutX="358.0" layoutY="279.0" prefHeight="40.0" prefWidth="112.0" promptText="Edit Answer Key" />
+      <Button layoutX="267.0" layoutY="343.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="31.0" prefWidth="67.0" text="Save" />
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <TextField fx:id="courseField" layoutX="140.0" layoutY="279.0" prefHeight="40.0" prefWidth="112.0" promptText="Course" />
    </children>
 </AnchorPane>
