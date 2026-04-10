@@ -19,6 +19,12 @@ public class Candidate {
         this.applicationStatus = applicationStatus;
     }
 
+    public Candidate(String candidateName, int candidateId, boolean candidateAttendance) {
+        this.candidateName = candidateName;
+        this.candidateId = candidateId;
+        this.candidateAttendance = candidateAttendance;
+    }
+
     public int getCandidateId() {
         return candidateId;
     }

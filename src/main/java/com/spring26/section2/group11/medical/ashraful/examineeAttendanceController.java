@@ -8,9 +8,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class examineeAttendanceController
 {
@@ -25,8 +28,31 @@ public class examineeAttendanceController
     @javafx.fxml.FXML
     private TableColumn<Candidate, Integer> candidateIdCol;
 
+    List<Candidate> ImmunologyCandidateList = new ArrayList<>();
+    List<Candidate> PhysiologyCandidateList = new ArrayList<>();
+    List<Candidate> ToxicologyCandidateList = new ArrayList<>();
+
+
     @javafx.fxml.FXML
     public void initialize() {
+        candidateNameCol.setCellValueFactory(new PropertyValueFactory<>("candidateName"));
+        candidateIdCol.setCellValueFactory(new PropertyValueFactory<>("candidateId"));
+
+
+        examsCB.getItems().addAll("Immunology", "Physiology", "Toxicology");
+
+        ImmunologyCandidateList.add(new Candidate("Ashraful Islam", 2010192, false));
+        ImmunologyCandidateList.add(new Candidate("Arnob Datta", 2235522, false));
+        ImmunologyCandidateList.add(new Candidate("Asif Islam", 2246466, false));
+
+        PhysiologyCandidateList.add(new Candidate("Mozammel Hossain", 2246446, false));
+        PhysiologyCandidateList.add(new Candidate("Abdullah Al Mamun", 2124473, false));
+
+        ToxicologyCandidateList.add(new Candidate("Ayman Rahman", 2014683, false));
+
+        attendanceTable.getItems().addAll(ImmunologyCandidateList);
+
+
     }
 
     @Deprecated
@@ -39,6 +65,21 @@ public class examineeAttendanceController
 
     @javafx.fxml.FXML
     public void loadStudentListButton(ActionEvent actionEvent) {
+        String exam = examsCB.getValue();
+
+        if ( exam.equals("Immunology") ) {
+            attendanceTable.getItems().addAll(ImmunologyCandidateList);
+        }
+
+        if ( exam.equals("Physiology") ) {
+            attendanceTable.getItems().addAll(PhysiologyCandidateList);
+        }
+
+        if ( exam.equals("Toxicology") ) {
+            attendanceTable.getItems().addAll(ToxicologyCandidateList);
+        }
+
+
     }
 
     @javafx.fxml.FXML
