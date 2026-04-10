@@ -2,6 +2,7 @@ package com.spring26.section2.group11.medical.arnob;
 
 import com.spring26.section2.group11.medical.HelloApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -12,6 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class viewExamScheduleController {
     @javafx.fxml.FXML
@@ -21,18 +24,16 @@ public class viewExamScheduleController {
     @javafx.fxml.FXML
     private TableView<Student> examTable;
     @javafx.fxml.FXML
-    private Label display2;
-    @javafx.fxml.FXML
-    private TextArea detailsArea;
-    @javafx.fxml.FXML
     private TableColumn<Student, String> subjectCol;
+    @FXML
+    private TableColumn<Student, String> roomCol;
+
+    List<Student> studentList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
 
-    @javafx.fxml.FXML
-    public void nextButton(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
