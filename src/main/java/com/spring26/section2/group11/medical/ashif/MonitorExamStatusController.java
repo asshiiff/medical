@@ -7,9 +7,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MonitorExamStatusController
 {
@@ -20,8 +23,13 @@ public class MonitorExamStatusController
     @javafx.fxml.FXML
     private TableColumn<Exam,String> examlistCol;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+
+
     }
 
     @javafx.fxml.FXML

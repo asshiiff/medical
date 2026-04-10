@@ -19,7 +19,7 @@ import java.util.List;
 public class AnalyzeQuestionDistributionController
 {
     @javafx.fxml.FXML
-    private TableColumn<Exam,String> typeCol;
+    private TableColumn<Exam,Integer> typeCol;
     @javafx.fxml.FXML
     private TableView<Exam> questionDistributionTable;
     @javafx.fxml.FXML
@@ -40,7 +40,7 @@ public class AnalyzeQuestionDistributionController
         eventCol.setCellValueFactory(new PropertyValueFactory<>("event"));
         descriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
 
-        examList.add(new Exam("Very hard exam","Friday","Written exam"));
+        examList.add(new Exam("Friday","Written exam",1));
 
         questionDistributionTable.getItems().addAll(examList);
 
@@ -64,6 +64,19 @@ public class AnalyzeQuestionDistributionController
 
     @javafx.fxml.FXML
     public void saveQuestionDescriptionButton(ActionEvent actionEvent) {
+
+        Exam selectedExam = questionDistributionTable.getSelectionModel().getSelectedItem();
+
+        if (selectedExam != null) {
+            String message = "Saved: "
+                    + selectedExam.getDescription() + " | "
+                    + selectedExam.getEvent() + " | Type: "
+                    + selectedExam.getType();
+
+            display.setText(message);
+        } else {
+            display.setText("Please select a row first!");
+        }
 
 
     }

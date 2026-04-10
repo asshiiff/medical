@@ -19,6 +19,7 @@ public class PreviewQuestionPaperController
 
     @javafx.fxml.FXML
     public void initialize() {
+        textArea.setText("Preview Question Paper");
     }
 
     @javafx.fxml.FXML

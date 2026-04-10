@@ -28,5 +28,7 @@
          </font>
       </Label>
       <Button layoutX="22.0" layoutY="361.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Label fx:id="successfullLabel" layoutX="221.0" layoutY="365.0" prefHeight="17.0" prefWidth="129.0" />
+      <Label fx:id="amountLabel" layoutX="324.0" layoutY="284.0" prefHeight="25.0" prefWidth="87.0" textFill="#d31919" />
    </children>
 </AnchorPane>

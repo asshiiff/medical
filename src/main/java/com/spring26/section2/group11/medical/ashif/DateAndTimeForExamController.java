@@ -25,6 +25,16 @@ public class DateAndTimeForExamController
 
     @javafx.fxml.FXML
     public void dateAndTimeButton(ActionEvent actionEvent) {
+
+        if (datePicker.getValue() == null || timeCB.getValue() == null) {
+            System.out.println("Please select both date and time!");
+            return;
+        }
+
+        System.out.println("Exam scheduled on: "
+                + datePicker.getValue()
+                + " at "
+                + timeCB.getValue());
     }
 
     @javafx.fxml.FXML

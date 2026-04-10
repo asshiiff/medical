@@ -12,9 +12,10 @@
       <ComboBox fx:id="selectExamCB" layoutX="48.0" layoutY="41.0" prefWidth="150.0" promptText="Select Exam" />
       <ComboBox fx:id="reportTypeCB" layoutX="225.0" layoutY="41.0" prefWidth="150.0" promptText="Report type: PDF/CSV" />
       <Button layoutX="449.0" layoutY="41.0" mnemonicParsing="false" onAction="#reportButton" text="Generate Report" />
-      <TableView fx:id="previousDataTable" layoutX="49.0" layoutY="88.0" prefHeight="200.0" prefWidth="478.0">
+      <TableView fx:id="examReportTable" layoutX="49.0" layoutY="88.0" prefHeight="200.0" prefWidth="478.0">
         <columns>
-          <TableColumn fx:id="previousDataCol" prefWidth="75.0" text="Previous Data" />
+          <TableColumn fx:id="examCol" prefWidth="75.0" text="Exam" />
+            <TableColumn fx:id="reportCol" prefWidth="75.0" text="Report" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

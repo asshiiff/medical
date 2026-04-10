@@ -8,9 +8,12 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EditQuestionPaperController
 {
@@ -23,12 +26,35 @@ public class EditQuestionPaperController
     @javafx.fxml.FXML
     private TextArea textArea;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+
+        questionListCol.setCellValueFactory(new PropertyValueFactory<>("question"));
+        difficultyCB.getItems().addAll("Easy","Medium","Hard");
+
+        examList.add(new Exam(1));
+        examList.add(new Exam(2));
+        examList.add(new Exam(3));
+
+        questionListTable.getItems().addAll(examList);
+
+
     }
 
     @javafx.fxml.FXML
     public void changeButton(ActionEvent actionEvent) {
+
+        Exam selected = questionListTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null || difficultyCB.getValue() == null) {
+            return;
+        }
+
+        selected.setQuestion(Integer.parseInt(textArea.getText()));
+
+        questionListTable.refresh();
     }
 
     @javafx.fxml.FXML
