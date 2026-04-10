@@ -19,6 +19,12 @@ public class Student {
     private String time;
     private String room;
 
+
+    public Student(int studentId, int marks) {
+        this.studentId = studentId;
+        this.marks = marks;
+    }
+
     public Student(String subject, int marks, int total, String rank) {
         this.subject = subject;
         this.marks = marks;

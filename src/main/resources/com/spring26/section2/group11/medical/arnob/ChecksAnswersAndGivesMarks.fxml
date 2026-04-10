@@ -10,11 +10,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.ChecksAnswersAndGivesMarksController">
    <children>
-      <Label fx:id="display2" layoutX="90.0" layoutY="71.0" prefHeight="17.0" prefWidth="113.0" text="Upload Answer File :" />
-      <TextField fx:id="fileField" layoutX="210.0" layoutY="67.0" />
-      <Button layoutX="405.0" layoutY="67.0" mnemonicParsing="false" onAction="#uploadButton" text="Upload" />
-      <Label fx:id="display3" layoutX="263.0" layoutY="133.0" prefHeight="17.0" prefWidth="97.0" text="File Check Done" />
-      <TableView fx:id="answerTable" layoutX="-6.0" layoutY="161.0" prefHeight="171.0" prefWidth="612.0">
+      <TextField fx:id="studentIdField" layoutX="113.0" layoutY="54.0" prefHeight="35.0" prefWidth="166.0" promptText="Student ID" />
+      <Button layoutX="363.0" layoutY="80.0" mnemonicParsing="false" onAction="#uploadButton" prefHeight="42.0" prefWidth="76.0" text="Upload" />
+      <TableView fx:id="answerTable" layoutX="-1.0" layoutY="161.0" prefHeight="171.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="studentIdCol" prefWidth="75.0" text="Student ID" />
           <TableColumn fx:id="marksCol" prefWidth="75.0" text="Marks" />
@@ -28,6 +26,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="259.0" layoutY="341.0" mnemonicParsing="false" onAction="#backButton" prefHeight="35.0" prefWidth="70.0" text="Back" />
+      <Button layoutX="14.0" layoutY="351.0" mnemonicParsing="false" onAction="#backButton" prefHeight="35.0" prefWidth="70.0" text="Back" />
+      <TextField fx:id="marksField" layoutX="113.0" layoutY="108.0" prefHeight="42.0" prefWidth="166.0" promptText="Marks" />
    </children>
 </AnchorPane>
