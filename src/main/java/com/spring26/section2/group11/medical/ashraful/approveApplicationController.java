@@ -29,7 +29,7 @@ public class approveApplicationController
 
     @javafx.fxml.FXML
     public void initialize() {
-        applicationsCol.setCellValueFactory(new PropertyValueFactory<>("applications"));
+        applicationsCol.setCellValueFactory(new PropertyValueFactory<>("application"));
 
         ImmunologyApplicationsList.add(new Candidate("ImmuApp01"));
         ImmunologyApplicationsList.add(new Candidate("ImmuApp02"));
@@ -42,8 +42,6 @@ public class approveApplicationController
 
         examsCB.getItems().addAll("Immunology", "Toxicology", "Pharmacology");
 
-        applicationsTable.getItems().addAll(ImmunologyApplicationsList);
-
 
 
     }
@@ -53,18 +51,19 @@ public class approveApplicationController
         String exam = examsCB.getValue();
 
         if ( exam.equals("Immunology") ) {
+            applicationsTable.getItems().clear();
             applicationsTable.getItems().addAll(ImmunologyApplicationsList);
         }
 
         if ( exam.equals("Toxicology") ) {
+            applicationsTable.getItems().clear();
             applicationsTable.getItems().addAll(ToxicologyApplicationsList);
         }
 
         if ( exam.equals("Pharmacology") ) {
+            applicationsTable.getItems().clear();
             applicationsTable.getItems().addAll(PharmacologyApplicationsList);
         }
-
-        applicationsTable.refresh();
 
 
     }
