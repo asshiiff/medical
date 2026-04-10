@@ -31,6 +31,10 @@ public class updateProfileController {
     private Label display4;
 
     @javafx.fxml.FXML
+    public void initialize() {
+    }
+
+    @javafx.fxml.FXML
     public void updateButton(ActionEvent actionEvent) {
     }
 

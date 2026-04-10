@@ -7,29 +7,66 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class approveApplicationController
 {
     @javafx.fxml.FXML
-    private TableView<Applications> applicationsTable;
+    private TableView<Candidate> applicationsTable;
     @javafx.fxml.FXML
     private ComboBox<String> examsCB;
     @javafx.fxml.FXML
-    private TableColumn<Applications, String> applicationsCol;
+    private TableColumn<Candidate, String> applicationsCol;
+
+    List<Candidate> ImmunologyApplicationsList = new ArrayList<>();
+    List<Candidate> ToxicologyApplicationsList = new ArrayList<>();
+    List<Candidate> PharmacologyApplicationsList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
+        applicationsCol.setCellValueFactory(new PropertyValueFactory<>("applications"));
 
-    @Deprecated
-    public void approveApplicationsTabButton(ActionEvent actionEvent) {
+        ImmunologyApplicationsList.add(new Candidate("ImmuApp01"));
+        ImmunologyApplicationsList.add(new Candidate("ImmuApp02"));
+
+        ToxicologyApplicationsList.add(new Candidate("ToxApp01"));
+        ToxicologyApplicationsList.add(new Candidate("ToxApp02"));
+        ToxicologyApplicationsList.add(new Candidate("ToxApp03"));
+
+        PharmacologyApplicationsList.add(new Candidate("PharmaApp01"));
+
+        examsCB.getItems().addAll("Immunology", "Toxicology", "Pharmacology");
+
+        applicationsTable.getItems().addAll(ImmunologyApplicationsList);
+
+
+
     }
 
     @javafx.fxml.FXML
     public void checkApplicationsButton(ActionEvent actionEvent) {
+        String exam = examsCB.getValue();
+
+        if ( exam.equals("Immunology") ) {
+            applicationsTable.getItems().addAll(ImmunologyApplicationsList);
+        }
+
+        if ( exam.equals("Toxicology") ) {
+            applicationsTable.getItems().addAll(ToxicologyApplicationsList);
+        }
+
+        if ( exam.equals("Pharmacology") ) {
+            applicationsTable.getItems().addAll(PharmacologyApplicationsList);
+        }
+
+        applicationsTable.refresh();
+
+
     }
 
     @javafx.fxml.FXML

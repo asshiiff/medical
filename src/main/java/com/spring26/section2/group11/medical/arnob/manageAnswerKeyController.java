@@ -13,17 +13,21 @@ public class manageAnswerKeyController {
     @javafx.fxml.FXML
     private TextField answerKeyField;
     @javafx.fxml.FXML
-    private ComboBox courseCB;
+    private ComboBox<String> courseCB;
     @javafx.fxml.FXML
-    private ComboBox semesterCB;
+    private ComboBox<String> semesterCB;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableView answerTable;
+    private TableView<Course> answerTable;
     @javafx.fxml.FXML
-    private TableColumn courseCol;
+    private TableColumn<Course,String> courseCol;
     @javafx.fxml.FXML
-    private TableColumn answerKeyCol;
+    private TableColumn<Course,String> answerKeyCol;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void saveButton(ActionEvent actionEvent) {

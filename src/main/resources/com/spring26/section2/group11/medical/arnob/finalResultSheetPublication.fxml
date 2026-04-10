@@ -24,7 +24,7 @@
       <DatePicker fx:id="toLocalDate" layoutX="400.0" layoutY="118.0" />
       <TableView fx:id="resultTable" layoutY="169.0" prefHeight="200.0" prefWidth="772.0">
         <columns>
-          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="studentIdCol" prefWidth="75.0" text="Student ID" />
           <TableColumn fx:id="marksCol" prefWidth="75.0" text="Marks" />
             <TableColumn fx:id="gradeCol" prefWidth="75.0" text="Grade" />
         </columns>

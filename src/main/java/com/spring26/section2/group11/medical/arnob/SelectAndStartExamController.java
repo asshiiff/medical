@@ -15,9 +15,13 @@ public class SelectAndStartExamController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private ComboBox examSubjectCB;
+    private ComboBox<String> examSubjectCB;
     @javafx.fxml.FXML
     private TextArea instructionsArea;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void startExamButton(ActionEvent actionEvent) {

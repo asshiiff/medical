@@ -26,6 +26,10 @@ public class feedbackController {
     private Label display4;
 
     @javafx.fxml.FXML
+    public void initialize() {
+    }
+
+    @javafx.fxml.FXML
     public void sendButton(ActionEvent actionEvent) {
     }
 

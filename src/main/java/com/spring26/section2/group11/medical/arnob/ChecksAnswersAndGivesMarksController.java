@@ -16,17 +16,21 @@ public class ChecksAnswersAndGivesMarksController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableColumn marksCol;
+    private TableColumn<Student,Integer> marksCol;
     @javafx.fxml.FXML
-    private TableColumn studentIdCol;
+    private TableColumn<Student, Integer> studentIdCol;
     @javafx.fxml.FXML
     private TextField fileField;
     @javafx.fxml.FXML
-    private TableView answerTable;
+    private TableView<Student> answerTable;
     @javafx.fxml.FXML
     private Label display3;
     @javafx.fxml.FXML
     private Label display2;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {

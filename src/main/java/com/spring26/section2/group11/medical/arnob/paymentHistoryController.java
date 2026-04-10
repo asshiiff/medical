@@ -7,23 +7,44 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class paymentHistoryController {
     @javafx.fxml.FXML
-    private TableColumn iDCol;
-    @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableColumn amountCol;
+    private TableColumn<Student,Integer> amountCol;
     @javafx.fxml.FXML
-    private TableColumn statusCol;
+    private TableColumn<Student, String> statusCol;
     @javafx.fxml.FXML
-    private TableView paymentTable;
+    private TableView<Student> paymentTable;
     @javafx.fxml.FXML
     private Label display2;
+    @javafx.fxml.FXML
+    private TableColumn<Student, Integer> studentIdCol;
+
+    List<Student> studentList = new ArrayList<>();
+
+    @javafx.fxml.FXML
+    public void initialize() {
+
+        studentIdCol.setCellValueFactory( new PropertyValueFactory<>("studentId"));
+        amountCol.setCellValueFactory( new PropertyValueFactory<>("amount"));
+        statusCol.setCellValueFactory( new PropertyValueFactory<>("status"));
+
+        studentList.add(new Student(2221684,"paid",1200));
+        studentList.add(new Student(2010192,"paid",3000));
+        studentList.add(new Student(2230191,"Due",5000));
+
+
+        paymentTable.getItems().addAll(studentList);
+
+    }
 
     @javafx.fxml.FXML
     public void payButton(ActionEvent actionEvent) {

@@ -13,19 +13,23 @@ import java.io.IOException;
 
 public class EvalutorCreatesRankingController {
     @javafx.fxml.FXML
-    private TableColumn studentNameCol;
+    private TableColumn<Student, String> studentNameCol;
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableColumn marksCol;
+    private TableColumn<Student,String> marksCol;
     @javafx.fxml.FXML
-    private TableColumn rankCol;
+    private TableColumn<Student, Integer> rankCol;
     @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML
-    private TableView rankTable;
+    private TableView<Student> rankTable;
     @javafx.fxml.FXML
-    private TableColumn studentIDCol;
+    private TableColumn<Student,Integer> studentIDCol;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void saveRankingButton(ActionEvent actionEvent) {
@@ -33,10 +37,6 @@ public class EvalutorCreatesRankingController {
 
     @javafx.fxml.FXML
     public void generateRankingButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void exportPDFButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

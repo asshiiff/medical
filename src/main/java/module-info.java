@@ -11,6 +11,7 @@ module com.spring26.section2.group11.medical {
     opens com.spring26.section2.group11.medical.ashraful to javafx.fxml;
     opens com.spring26.section2.group11.medical.ashif to javafx.fxml, javafx.base;
     opens com.spring26.section2.group11.medical.arnob to javafx.fxml;
+    exports com.spring26.section2.group11.medical.arnob;
 
 
 }

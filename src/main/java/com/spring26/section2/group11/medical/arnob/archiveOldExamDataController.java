@@ -15,15 +15,19 @@ public class archiveOldExamDataController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableView oldExamTable;
+    private TableView<Student> oldExamTable;
     @javafx.fxml.FXML
-    private TableColumn examCol;
+    private TableColumn<Student, String> examCol;
     @javafx.fxml.FXML
-    private TableColumn subjectCol;
+    private TableColumn<Student, String> subjectCol;
     @javafx.fxml.FXML
-    private TableColumn semesterCol;
+    private TableColumn<Student, String> semesterCol;
     @javafx.fxml.FXML
     private Label display2;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void dataButton(ActionEvent actionEvent) {
