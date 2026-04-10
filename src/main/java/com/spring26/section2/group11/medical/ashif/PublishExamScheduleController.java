@@ -39,10 +39,26 @@ public class PublishExamScheduleController
 
     @javafx.fxml.FXML
     public void publishButton(ActionEvent actionEvent) {
+
+        if (examlistTable.getItems().isEmpty()) {
+            display.setText("No exam schedule to publish!");
+            return;
+        }
+
+        display.setText("Exam schedule published successfully!");
+
     }
 
     @javafx.fxml.FXML
     public void loginButton(ActionEvent actionEvent) {
+
+        if (usernameField.getText().equals("admin") &&
+                passwordField.getText().equals("1234")) {
+
+            display.setText("Login successful!");
+        } else {
+            display.setText("Invalid username or password!");
+        }
     }
 
     @javafx.fxml.FXML

@@ -8,9 +8,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashraful.approveApplicationController">
    <children>
-      <TableView fx:id="applicationsTable" layoutX="77.0" layoutY="66.0" prefHeight="202.0" prefWidth="508.0">
+      <TableView fx:id="applicationsTable" layoutX="8.0" layoutY="66.0" prefHeight="204.0" prefWidth="586.0">
         <columns>
           <TableColumn fx:id="applicationsCol" prefWidth="123.96844482421875" text="Applications" />
+            <TableColumn fx:id="candidateNameCol" prefWidth="123.96844482421875" text="Candidate Name" />
+            <TableColumn fx:id="candidateCGPACol" prefWidth="123.96844482421875" text="Candidate CGPA" />
+            <TableColumn fx:id="applicationStatusCol" prefWidth="123.96844482421875" text="Approved?" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -18,9 +21,8 @@
       </TableView>
       <ComboBox fx:id="examsCB" layoutX="75.0" layoutY="14.0" prefWidth="150.0" promptText="Exams" />
       <Button layoutX="276.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkApplicationsButton" text="Check Applications for Exam" />
-      <Button layoutX="75.0" layoutY="285.0" mnemonicParsing="false" onAction="#reviewApplicationButton" text="Review Application" />
-      <Button layoutX="75.0" layoutY="327.0" mnemonicParsing="false" onAction="#acceptButton" text="Accept" />
-      <Button layoutX="150.0" layoutY="327.0" mnemonicParsing="false" onAction="#rejectButton" text="Reject" />
+      <Button layoutX="77.0" layoutY="286.0" mnemonicParsing="false" onAction="#acceptButton" text="Accept" />
+      <Button layoutX="150.0" layoutY="286.0" mnemonicParsing="false" onAction="#rejectButton" text="Reject" />
       <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

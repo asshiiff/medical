@@ -24,6 +24,18 @@ public class PreviewQuestionPaperController
 
     @javafx.fxml.FXML
     public void previewButton(ActionEvent actionEvent) {
+
+        textArea.setText(
+                "=== Question Paper Preview ===\n\n" +
+                        "1. Question One\n" +
+                        "2. Question Two\n" +
+                        "3. Question Three\n\n" +
+                        "Total Marks: 100"
+        );
+
+        display.setText("Preview generated!");
+
+
     }
 
     @javafx.fxml.FXML

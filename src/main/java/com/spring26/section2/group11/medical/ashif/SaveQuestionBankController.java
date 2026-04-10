@@ -51,4 +51,14 @@ public class SaveQuestionBankController
         stage.setScene(scene);
         stage.show();
     }
+
+    @javafx.fxml.FXML
+    public void addQuestionButton(ActionEvent actionEvent) {
+
+        questionTable.getItems().add(
+                new Exam(Integer.parseInt(textArea.getText()))
+        );
+
+        display.setText("Added!");
+    }
 }

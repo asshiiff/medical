@@ -37,6 +37,17 @@ public class SubmitQuestionPaperController
 
     @javafx.fxml.FXML
     public void submitButton(ActionEvent actionEvent) {
+
+        Exam selected = questionPapersTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null) {
+            display.setText("Select a question paper!");
+            return;
+        }
+
+        display.setText("Submitted successfully!");
+
+
     }
 
     @javafx.fxml.FXML
