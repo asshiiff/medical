@@ -7,9 +7,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CreateQuestionPaperController
 {
@@ -24,8 +27,19 @@ public class CreateQuestionPaperController
     @javafx.fxml.FXML
     private Label display;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+
+        totalScoreCol.setCellValueFactory(new PropertyValueFactory<>("totalScore"));
+        marksCol.setCellValueFactory(new PropertyValueFactory<>("marks"));
+        rankCol.setCellValueFactory(new PropertyValueFactory<>("rank"));
+
+        examList.add(new Exam(50,20,"10th Position"));
+        examList.add(new Exam(50,48,"1st Position"));
+
+        quesstionPaperTable.getItems().addAll(examList);
     }
 
     @javafx.fxml.FXML
