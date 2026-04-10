@@ -15,15 +15,15 @@ import java.io.IOException;
 public class AssignInvigilatorsController
 {
     @javafx.fxml.FXML
-    private TableView invigilatorTable;
+    private TableView<Exam> invigilatorTable;
     @javafx.fxml.FXML
-    private TableColumn invigilatorListCol;
+    private TableColumn<Exam,String> invigilatorListCol;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
     private ComboBox<String> invigilatorCB;
     @javafx.fxml.FXML
-    private TableColumn examCenterCol;
+    private TableColumn<Exam,String> examCenterCol;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -36,7 +36,7 @@ public class AssignInvigilatorsController
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/assignInvigilators.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/examControllerDashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) display .getScene().getWindow();
         stage.setTitle("Hello!");

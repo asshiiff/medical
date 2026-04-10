@@ -16,14 +16,14 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <ComboBox fx:id="selectExamCB" layoutX="21.0" layoutY="76.0" prefHeight="25.0" prefWidth="240.0" promptText="Select Exam" />
+      <ComboBox fx:id="selectSubjectCB" layoutX="21.0" layoutY="76.0" prefHeight="25.0" prefWidth="240.0" promptText="Select Subject" />
       <TextField fx:id="studentIdField" layoutX="290.0" layoutY="76.0" prefHeight="25.0" prefWidth="248.0" promptText="Student ID" />
       <TextField fx:id="currentMarksField" layoutX="596.0" layoutY="76.0" prefHeight="25.0" prefWidth="248.0" promptText="Current Marks" />
       <TextField fx:id="requestMarksField" layoutX="439.0" layoutY="129.0" prefHeight="25.0" prefWidth="248.0" promptText="Request Marks" />
       <ComboBox fx:id="statusCB" layoutX="17.0" layoutY="129.0" prefHeight="25.0" prefWidth="248.0" promptText="Status" />
       <TableView layoutX="6.0" layoutY="240.0" prefHeight="200.0" prefWidth="550.0">
         <columns>
-          <TableColumn fx:id="examCol" prefWidth="75.0" text="Exam" />
+          <TableColumn fx:id="subjectCol" prefWidth="75.0" text="Subject" />
           <TableColumn fx:id="studentIdCol" prefWidth="75.0" text="Student ID" />
             <TableColumn fx:id="marksCol" prefWidth="75.0" text="Marks" />
             <TableColumn fx:id="statusCol" prefWidth="75.0" text="Status" />

@@ -14,15 +14,15 @@ import java.io.IOException;
 public class AnalyzeQuestionDistributionController
 {
     @javafx.fxml.FXML
-    private TableColumn typeCol;
+    private TableColumn<Exam,String> typeCol;
     @javafx.fxml.FXML
-    private TableView questionDistributionTable;
+    private TableView<Exam> questionDistributionTable;
     @javafx.fxml.FXML
-    private TableColumn eventCol;
+    private TableColumn<Exam,String> eventCol;
     @javafx.fxml.FXML
     private Label display;
     @javafx.fxml.FXML
-    private TableColumn descriptionCol;
+    private TableColumn<Exam,String> descriptionCol;
 
     @javafx.fxml.FXML
     public void initialize() {
