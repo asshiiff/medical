@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,5 +16,6 @@
       <ComboBox fx:id="selectSubjectCB" layoutX="31.0" layoutY="273.0" prefWidth="150.0" promptText="Select Subject" />
       <Button layoutX="206.0" layoutY="273.0" mnemonicParsing="false" onAction="#saveExamFileButton" text="Save Exam File" />
       <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Label fx:id="displayLabel" layoutX="329.0" layoutY="277.0" prefHeight="19.0" prefWidth="191.0" />
    </children>
 </AnchorPane>
