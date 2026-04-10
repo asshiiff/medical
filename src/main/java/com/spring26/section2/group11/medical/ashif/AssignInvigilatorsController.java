@@ -8,9 +8,12 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AssignInvigilatorsController
 {
@@ -24,13 +27,31 @@ public class AssignInvigilatorsController
     private ComboBox<String> invigilatorCB;
     @javafx.fxml.FXML
     private TableColumn<Exam,String> examCenterCol;
+    @javafx.fxml.FXML
+    private ComboBox<String> examCenterCB;
+
+    List<Exam> examList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+        examCenterCol.setCellValueFactory(new PropertyValueFactory<>("examCenter"));
+        invigilatorListCol.setCellValueFactory(new PropertyValueFactory<>("invigilator"));
+
+        examCenterCB.getItems().addAll("Bonolota","Monorom","Nilima");
+        invigilatorCB.getItems().addAll("Ashraf","Arnob","Ashif");
+
+        examList.add(new Exam("Ashraf","Bonolota"));
+        examList.add(new Exam("Arnob","Monorom"));
+
+        invigilatorTable.getItems().addAll(examList);
+
+
+
     }
 
     @javafx.fxml.FXML
     public void assignButton(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

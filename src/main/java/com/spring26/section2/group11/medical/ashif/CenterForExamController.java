@@ -16,6 +16,8 @@ public class CenterForExamController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        centerCB.getItems().addAll("Bonolota","Monorom","Nilima");
     }
 
     @javafx.fxml.FXML

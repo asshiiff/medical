@@ -7,9 +7,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CategorizeQuestionsController
 {
@@ -20,8 +23,20 @@ public class CategorizeQuestionsController
     @javafx.fxml.FXML
     private TableView<Exam> questionsTable;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+
+        questionsCol.setCellValueFactory(new PropertyValueFactory<>("question"));
+        categoryCB.getItems().addAll("A type","B type","C type");
+
+        examList.add(new Exam("A type"));
+        examList.add(new Exam("B type"));
+        examList.add(new Exam("C type"));
+        questionsTable.getItems().addAll(examList);
+
+
     }
 
     @javafx.fxml.FXML

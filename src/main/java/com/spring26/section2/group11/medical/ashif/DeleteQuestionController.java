@@ -10,6 +10,8 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DeleteQuestionController
 {
@@ -20,8 +22,14 @@ public class DeleteQuestionController
     @javafx.fxml.FXML
     private Label display;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+
+
+
+
     }
 
     @javafx.fxml.FXML

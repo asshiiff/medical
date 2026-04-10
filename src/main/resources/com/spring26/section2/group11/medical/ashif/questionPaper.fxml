@@ -18,7 +18,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="446.0" layoutY="333.0" mnemonicParsing="false" onAction="#addButton" text="Download PDF" />
+      <Button layoutX="500.0" layoutY="333.0" mnemonicParsing="false" onAction="#saveButton" text="Save" />
       <Button layoutX="57.0" layoutY="333.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Label fx:id="display" layoutX="229.0" layoutY="337.0" prefHeight="17.0" prefWidth="159.0" />
    </children>
