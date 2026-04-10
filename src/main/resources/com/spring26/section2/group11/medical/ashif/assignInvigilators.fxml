@@ -22,5 +22,6 @@
       <Button layoutX="496.0" layoutY="295.0" mnemonicParsing="false" onAction="#assignButton" text="Assign" />
       <Label fx:id="display" layoutX="46.0" layoutY="346.0" prefHeight="17.0" prefWidth="205.0" />
       <Button layoutX="46.0" layoutY="295.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <ComboBox fx:id="examCenterCB" layoutX="397.0" layoutY="33.0" prefWidth="150.0" promptText="Exam Center" />
    </children>
 </AnchorPane>

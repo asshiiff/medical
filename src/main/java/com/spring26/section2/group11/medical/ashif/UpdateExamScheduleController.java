@@ -5,9 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UpdateExamScheduleController
 {
@@ -22,8 +25,14 @@ public class UpdateExamScheduleController
     @javafx.fxml.FXML
     private TableColumn<Exam,String> examlistCol;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+        examCB.getItems().addAll("DBMS","DS","DLD");
+
+
     }
 
     @javafx.fxml.FXML

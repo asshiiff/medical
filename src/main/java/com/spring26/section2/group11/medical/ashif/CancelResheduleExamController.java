@@ -5,9 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CancelResheduleExamController
 {
@@ -22,16 +25,38 @@ public class CancelResheduleExamController
     @javafx.fxml.FXML
     private TableColumn<Exam,String> examlistCol;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+
     }
 
     @javafx.fxml.FXML
     public void resheduleButton(ActionEvent actionEvent) {
+
+        Exam selectedExam = examlistTable.getSelectionModel().getSelectedItem();
+
+        selectedExam.setExam(
+                selectedExam.getExam() + " | " + datePicker.getValue() + " | " + newTimeCB.getValue()
+        );
+
+        examlistTable.refresh();
+
+        display.setText("Rescheduled!");
+
     }
 
     @javafx.fxml.FXML
     public void cancelButton(ActionEvent actionEvent) {
+
+        Exam selectedExam = examlistTable.getSelectionModel().getSelectedItem();
+
+        examlistTable.getItems().remove(selectedExam);
+
+        display.setText("Cancelled!");
     }
 
     @javafx.fxml.FXML

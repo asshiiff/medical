@@ -7,25 +7,57 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DeleteQuestionController
 {
     @javafx.fxml.FXML
     private TableView<Exam> questionlistTable;
     @javafx.fxml.FXML
-    private TableColumn<Exam,String> questionList;
-    @javafx.fxml.FXML
     private Label display;
+    @javafx.fxml.FXML
+    private TableColumn<Exam,Integer> questionlistCol;
+
+    List<Exam> examList = new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        questionlistCol.setCellValueFactory(new PropertyValueFactory<>("question"));
+
+        examList.add(new Exam(1));
+        examList.add(new Exam(2));
+        examList.add(new Exam(3));
+
+
+        questionlistTable.getItems().addAll(examList);
+
+
+
+
+
+
     }
 
     @javafx.fxml.FXML
     public void deleteButton(ActionEvent actionEvent) {
+
+        Exam selected = questionlistTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null) {
+            display.setText("Please select a question to delete!");
+            return;
+        }
+
+        questionlistTable.getItems().remove(selected);
+
+        display.setText("Question deleted successfully!");
     }
 
     @javafx.fxml.FXML

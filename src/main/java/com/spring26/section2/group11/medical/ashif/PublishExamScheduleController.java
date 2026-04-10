@@ -8,9 +8,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PublishExamScheduleController
 {
@@ -25,8 +28,13 @@ public class PublishExamScheduleController
     @javafx.fxml.FXML
     private TableView<Exam> examlistTable;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+
     }
 
     @javafx.fxml.FXML

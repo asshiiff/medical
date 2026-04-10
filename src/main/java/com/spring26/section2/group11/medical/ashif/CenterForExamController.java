@@ -16,10 +16,21 @@ public class CenterForExamController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        centerCB.getItems().addAll("Bonolota","Monorom","Nilima");
     }
 
     @javafx.fxml.FXML
     public void centerButton(ActionEvent actionEvent) {
+
+        String selectedCenter = centerCB.getValue();
+
+        if (selectedCenter == null) {
+            System.out.println("Please select a center!");
+            return;
+        }
+
+        System.out.println("Selected Center: " + selectedCenter);
     }
 
     @javafx.fxml.FXML

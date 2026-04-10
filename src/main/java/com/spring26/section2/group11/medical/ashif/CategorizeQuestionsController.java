@@ -7,25 +7,46 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CategorizeQuestionsController
 {
     @javafx.fxml.FXML
-    private TableColumn<Exam,String> questionsCol;
+    private TableColumn<Exam,Integer> questionsCol;
     @javafx.fxml.FXML
     private ComboBox<String> categoryCB;
     @javafx.fxml.FXML
     private TableView<Exam> questionsTable;
 
+    List<Exam> examList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+
+        questionsCol.setCellValueFactory(new PropertyValueFactory<>("question"));
+        categoryCB.getItems().addAll("A type","B type","C type");
+
+        examList.add(new Exam(1));
+        examList.add(new Exam(2));
+        examList.add(new Exam(3));
+        questionsTable.getItems().addAll(examList);
+
+
     }
 
     @javafx.fxml.FXML
     public void assignButton(ActionEvent actionEvent) {
+
+        Exam selected = questionsTable.getSelectionModel().getSelectedItem();
+
+        selected.setCategory(categoryCB.getValue());
+
+        questionsTable.refresh();
     }
 
     @javafx.fxml.FXML
