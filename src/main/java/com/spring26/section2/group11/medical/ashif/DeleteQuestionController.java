@@ -47,6 +47,17 @@ public class DeleteQuestionController
 
     @javafx.fxml.FXML
     public void deleteButton(ActionEvent actionEvent) {
+
+        Exam selected = questionlistTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null) {
+            display.setText("Please select a question to delete!");
+            return;
+        }
+
+        questionlistTable.getItems().remove(selected);
+
+        display.setText("Question deleted successfully!");
     }
 
     @javafx.fxml.FXML

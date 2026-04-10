@@ -65,6 +65,19 @@ public class AnalyzeQuestionDistributionController
     @javafx.fxml.FXML
     public void saveQuestionDescriptionButton(ActionEvent actionEvent) {
 
+        Exam selectedExam = questionDistributionTable.getSelectionModel().getSelectedItem();
+
+        if (selectedExam != null) {
+            String message = "Saved: "
+                    + selectedExam.getDescription() + " | "
+                    + selectedExam.getEvent() + " | Type: "
+                    + selectedExam.getType();
+
+            display.setText(message);
+        } else {
+            display.setText("Please select a row first!");
+        }
+
 
     }
 }

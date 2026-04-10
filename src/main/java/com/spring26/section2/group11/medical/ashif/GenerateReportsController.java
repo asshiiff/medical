@@ -47,10 +47,35 @@ public class GenerateReportsController
 
     @javafx.fxml.FXML
     public void downloadButton(ActionEvent actionEvent) {
+
+        Exam selected = examReportTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null) {
+            display.setText("Select a report first!");
+            return;
+        }
+
+        display.setText("Downloading report for " + selected.getExam() + "...");
+
+
     }
 
     @javafx.fxml.FXML
     public void reportButton(ActionEvent actionEvent) {
+
+        String exam = selectExamCB.getValue();
+        String reportType = reportTypeCB.getValue();
+
+        if (exam == null || reportType == null) {
+            display.setText("Please select exam and report type!");
+            return;
+        }
+
+        Exam newReport = new Exam(exam, reportType, null);
+
+        examReportTable.getItems().add(newReport);
+
+        display.setText("Report generated!");
     }
 
     @javafx.fxml.FXML

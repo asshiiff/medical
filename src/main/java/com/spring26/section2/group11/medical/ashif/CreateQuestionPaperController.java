@@ -57,5 +57,18 @@ public class CreateQuestionPaperController
 
     @javafx.fxml.FXML
     public void saveButton(ActionEvent actionEvent) {
+
+        Exam selected = quesstionPaperTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null) {
+            display.setText("Please select a row!");
+            return;
+        }
+
+        display.setText(
+                "Saved → Score: " + selected.getTotalScore() +
+                        ", Marks: " + selected.getMarks() +
+                        ", Rank: " + selected.getRank()
+        );
     }
 }

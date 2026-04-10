@@ -13,6 +13,7 @@ public class Exam {
     private int rank;
     private String report;
     private String questionPaper;
+    private String category;
 
     public Exam(String description, String event, int type) {
         this.description = description;
@@ -135,6 +136,20 @@ public class Exam {
     public void setType(int type) {
         this.type = type;
     }
+
+    public Exam(String category) {
+        this.category = category;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+
 
 
 }

@@ -52,6 +52,14 @@ public class AssignInvigilatorsController
     @javafx.fxml.FXML
     public void assignButton(ActionEvent actionEvent) {
 
+        invigilatorTable.getItems().add(
+                new Exam(invigilatorCB.getValue(), examCenterCB.getValue())
+        );
+
+        display.setText("Assigned successfully!");
+
+
+
     }
 
     @javafx.fxml.FXML

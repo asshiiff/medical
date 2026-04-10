@@ -45,6 +45,16 @@ public class EditQuestionPaperController
 
     @javafx.fxml.FXML
     public void changeButton(ActionEvent actionEvent) {
+
+        Exam selected = questionListTable.getSelectionModel().getSelectedItem();
+
+        if (selected == null || difficultyCB.getValue() == null) {
+            return;
+        }
+
+        selected.setQuestion(Integer.parseInt(textArea.getText()));
+
+        questionListTable.refresh();
     }
 
     @javafx.fxml.FXML
