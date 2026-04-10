@@ -10,7 +10,7 @@
    <children>
       <TableView fx:id="questionlistTable" layoutX="190.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn fx:id="questionList" prefWidth="75.0" text="Question List" />
+          <TableColumn fx:id="questionlistCol" prefWidth="75.0" text="Question List" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

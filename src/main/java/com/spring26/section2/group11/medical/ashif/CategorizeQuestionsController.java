@@ -17,7 +17,7 @@ import java.util.List;
 public class CategorizeQuestionsController
 {
     @javafx.fxml.FXML
-    private TableColumn<Exam,String> questionsCol;
+    private TableColumn<Exam,Integer> questionsCol;
     @javafx.fxml.FXML
     private ComboBox<String> categoryCB;
     @javafx.fxml.FXML
@@ -31,9 +31,9 @@ public class CategorizeQuestionsController
         questionsCol.setCellValueFactory(new PropertyValueFactory<>("question"));
         categoryCB.getItems().addAll("A type","B type","C type");
 
-        examList.add(new Exam("A type"));
-        examList.add(new Exam("B type"));
-        examList.add(new Exam("C type"));
+        examList.add(new Exam(1));
+        examList.add(new Exam(2));
+        examList.add(new Exam(3));
         questionsTable.getItems().addAll(examList);
 
 

@@ -19,7 +19,7 @@ import java.util.List;
 public class AnalyzeQuestionDistributionController
 {
     @javafx.fxml.FXML
-    private TableColumn<Exam,String> typeCol;
+    private TableColumn<Exam,Integer> typeCol;
     @javafx.fxml.FXML
     private TableView<Exam> questionDistributionTable;
     @javafx.fxml.FXML
@@ -40,7 +40,7 @@ public class AnalyzeQuestionDistributionController
         eventCol.setCellValueFactory(new PropertyValueFactory<>("event"));
         descriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
 
-        examList.add(new Exam("Very hard exam","Friday","Written exam"));
+        examList.add(new Exam("Friday","Written exam",1));
 
         questionDistributionTable.getItems().addAll(examList);
 

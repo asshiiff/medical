@@ -8,25 +8,41 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GenerateReportsController
 {
     @javafx.fxml.FXML
-    private TableView<Exam> previousDataTable;
-    @javafx.fxml.FXML
     private Label display;
-    @javafx.fxml.FXML
-    private TableColumn<Exam,String> previousDataCol;
     @javafx.fxml.FXML
     private ComboBox<String> selectExamCB;
     @javafx.fxml.FXML
     private ComboBox<String> reportTypeCB;
+    @javafx.fxml.FXML
+    private TableColumn<Exam,String> examCol;
+    @javafx.fxml.FXML
+    private TableColumn<Exam,String> reportCol;
+    @javafx.fxml.FXML
+    private TableView<Exam> examReportTable;
+
+    List<Exam> examlist = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        examCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+        reportCol.setCellValueFactory(new PropertyValueFactory<>("report"));
+        selectExamCB.getItems().addAll("Exam 1","Exam 2","Exam 3");
+        reportTypeCB.getItems().addAll("CSV");
+
+        examlist.add(new Exam("Pharmacology","CRV",null));
+        examReportTable.getItems().addAll(examlist);
+
     }
 
     @javafx.fxml.FXML

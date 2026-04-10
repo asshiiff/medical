@@ -3,18 +3,18 @@ package com.spring26.section2.group11.medical.ashif;
 public class Exam {
     private String description;
     private String event;
-    private String type;
+    private int type;
     private String invigilator;
     private String examCenter;
     private String exam;
-    private String question;
-    private int totalScore;
-    private int marks;
-    private String rank;
-    private String previousData;
+    private int question;
+    private double totalScore;
+    private double marks;
+    private int rank;
+    private String report;
     private String questionPaper;
 
-    public Exam(String description, String event, String type) {
+    public Exam(String description, String event, int type) {
         this.description = description;
         this.event = event;
         this.type = type;
@@ -25,19 +25,46 @@ public class Exam {
         this.examCenter = examCenter;
     }
 
-    public Exam(String question) {
+
+
+    public Exam(String exam, String report, String description) {
+        this.exam = exam;
+        this.report = report;
+        this.description = null;
+    }
+
+    public Exam(int question) {
         this.question = question;
     }
 
+    public String getExam() {
+        return exam;
+    }
 
-    public Exam(int totalScore, int marks, String rank) {
+    public void setExam(String exam) {
+        this.exam = exam;
+    }
+
+    public String getReport() {
+        return report;
+    }
+
+    public void setReport(String report) {
+        this.report = report;
+    }
+
+    public Exam(double totalScore, int marks, int rank) {
         this.totalScore = totalScore;
         this.marks = marks;
         this.rank = rank;
     }
 
+    public Exam(String exam, double totalScore) {
+        this.exam = exam;
+        this.totalScore = 0;
+    }
 
-    public int getTotalScore() {
+    public double getTotalScore() {
         return totalScore;
     }
 
@@ -45,7 +72,7 @@ public class Exam {
         this.totalScore = totalScore;
     }
 
-    public int getMarks() {
+    public double getMarks() {
         return marks;
     }
 
@@ -53,19 +80,19 @@ public class Exam {
         this.marks = marks;
     }
 
-    public String getRank() {
+    public int getRank() {
         return rank;
     }
 
-    public void setRank(String rank) {
+    public void setRank(int rank) {
         this.rank = rank;
     }
 
-    public String getQuestion() {
+    public int getQuestion() {
         return question;
     }
 
-    public void setQuestion(String question) {
+    public void setQuestion(int question) {
         this.question = question;
     }
 
@@ -101,29 +128,13 @@ public class Exam {
         this.event = event;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Exam{" +
-                "description='" + description + '\'' +
-                ", event='" + event + '\'' +
-                ", type='" + type + '\'' +
-                ", invigilator='" + invigilator + '\'' +
-                ", examCenter='" + examCenter + '\'' +
-                ", exam='" + exam + '\'' +
-                ", question='" + question + '\'' +
-                ", totalScore=" + totalScore +
-                ", marks=" + marks +
-                ", rank='" + rank + '\'' +
-                ", previousData='" + previousData + '\'' +
-                ", questionPaper='" + questionPaper + '\'' +
-                '}';
-    }
+
 }
