@@ -24,14 +24,24 @@ public class requestReEvaluationController {
     @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML
-    private Label display4;
+    private Label successfullLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        selectExamCB.getItems().addAll("Math","Physics","Chemistry");
     }
 
     @javafx.fxml.FXML
     public void submitRequestButton(ActionEvent actionEvent) {
+
+        successfullLabel.setText("Request Submitted");
+
+        reasonField.clear();
+
+        selectExamCB.getSelectionModel().clearSelection();
+
+
     }
 
     @javafx.fxml.FXML

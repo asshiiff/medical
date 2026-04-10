@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,6 +33,16 @@ public class viewExamScheduleController {
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        subjectCol.setCellValueFactory(new PropertyValueFactory<>("subject"));
+        roomCol.setCellValueFactory(new PropertyValueFactory<>("room"));
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+        studentList.add(new Student("Math","BC 6002",LocalDate.of(2026,4,10)));
+        studentList.add(new Student("Physics","BC 5006",LocalDate.of(2026,4,12)));
+        studentList.add(new Student("Chemistry","BC 8009",LocalDate.of(2026,4,21)));
+
+        examTable.getItems().addAll(studentList);
 
 
     }

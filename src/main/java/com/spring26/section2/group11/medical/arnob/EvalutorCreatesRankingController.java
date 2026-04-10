@@ -2,6 +2,7 @@ package com.spring26.section2.group11.medical.arnob;
 
 import com.spring26.section2.group11.medical.HelloApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -20,7 +21,7 @@ public class EvalutorCreatesRankingController {
     @javafx.fxml.FXML
     private Label display1;
     @javafx.fxml.FXML
-    private TableColumn<Student,Integer> marksCol;
+    private TableColumn<Student, Integer> marksCol;
     @javafx.fxml.FXML
     private TableColumn<Student, String> rankCol;
     @javafx.fxml.FXML
@@ -28,7 +29,7 @@ public class EvalutorCreatesRankingController {
     @javafx.fxml.FXML
     private Label generateRankingLabel;
     @javafx.fxml.FXML
-    private TableColumn<Student,Integer> studentIdCol;
+    private TableColumn<Student, Integer> studentIdCol;
     @javafx.fxml.FXML
     private Label successfullyLabel;
 
@@ -37,21 +38,21 @@ public class EvalutorCreatesRankingController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        rankCol.setCellValueFactory( new PropertyValueFactory<>("rank"));
+        rankCol.setCellValueFactory(new PropertyValueFactory<>("rank"));
         studentIdCol.setCellValueFactory(new PropertyValueFactory<>("studentId"));
         marksCol.setCellValueFactory(new PropertyValueFactory<>("marks"));
         studentNameCol.setCellValueFactory(new PropertyValueFactory<>("studentName"));
 
-        studentList.add( new Student("Arnob Datta",2221684,"1st",80));
-        studentList.add(new Student("Ashraful Islam",2010192,"2nd",70));
-        studentList.add(new Student("Ashif Islam",2230191,"3rd",60));
+        studentList.add(new Student("Arnob Datta", 2221684, "1st", 80));
+        studentList.add(new Student("Ashraful Islam", 2010192, "2nd", 70));
+        studentList.add(new Student("Ashif Islam", 2230191, "3rd", 60));
 
     }
 
     @javafx.fxml.FXML
     public void saveRankingButton(ActionEvent actionEvent) {
 
-       successfullyLabel.setText("Save Successfuuly");
+        successfullyLabel.setText("Save Successfuuly");
 
 
     }

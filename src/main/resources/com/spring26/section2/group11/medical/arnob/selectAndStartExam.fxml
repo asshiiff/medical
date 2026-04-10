@@ -3,15 +3,18 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.SelectAndStartExamController">
    <children>
       <Label fx:id="display1" layoutX="54.0" layoutY="53.0" text="Choose Your Medical Examination Subject" />
-      <ComboBox fx:id="examSubjectCB" layoutX="290.0" layoutY="49.0" prefWidth="150.0" promptText="Exam Subject" />
-      <Button layoutX="225.0" layoutY="319.0" mnemonicParsing="false" onAction="#startExamButton" text="Start Exam" />
-      <TextArea fx:id="instructionsArea" layoutX="-1.0" layoutY="100.0" prefHeight="157.0" prefWidth="600.0" text="Exam Instructions:&#10;                               1. Read all questions carefully.&#10;&#10;                               2. Do not close the system during exam.&#10;&#10;                               3. One answer per question.&#10;&#10;                               4. Click “Start Exam” to begin." />
-      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <ComboBox fx:id="examSubjectCB" layoutX="344.0" layoutY="49.0" prefHeight="42.0" prefWidth="150.0" promptText="Exam Subject" />
+      <Button layoutX="506.0" layoutY="58.0" mnemonicParsing="false" onAction="#startExamButton" text="Start Exam" />
+      <Button layoutX="21.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Label fx:id="examinstructionsLabel" layoutX="21.0" layoutY="108.0" prefHeight="17.0" prefWidth="108.0" />
+      <Label fx:id="exam1Label" layoutX="138.0" layoutY="146.0" prefHeight="17.0" prefWidth="319.0" />
+      <Label fx:id="exam2Label" layoutX="138.0" layoutY="179.0" prefHeight="17.0" prefWidth="294.0" />
+      <Label fx:id="exam3Label" layoutX="138.0" layoutY="211.0" prefHeight="17.0" prefWidth="281.0" />
+      <Label fx:id="exam4Label" layoutX="138.0" layoutY="246.0" prefHeight="17.0" prefWidth="260.0" />
    </children>
 </AnchorPane>
