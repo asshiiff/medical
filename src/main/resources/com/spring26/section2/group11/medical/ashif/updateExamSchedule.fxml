@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.ashif.UpdateExamScheduleController">
    <children>
       <DatePicker fx:id="datePicker" layoutX="34.0" layoutY="38.0" />
-      <ComboBox fx:id="examCB" layoutX="260.0" layoutY="38.0" prefWidth="150.0" />
+      <ComboBox fx:id="examCB" layoutX="260.0" layoutY="38.0" prefWidth="150.0" promptText="Exam" />
       <Button layoutX="479.0" layoutY="38.0" mnemonicParsing="false" onAction="#updateButton" text="Update" />
       <TableView fx:id="examlistTable" layoutX="31.0" layoutY="90.0" prefHeight="200.0" prefWidth="506.0">
         <columns>

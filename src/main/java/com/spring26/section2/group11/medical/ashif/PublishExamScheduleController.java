@@ -18,11 +18,7 @@ import java.util.List;
 public class PublishExamScheduleController
 {
     @javafx.fxml.FXML
-    private TextField usernameField;
-    @javafx.fxml.FXML
     private Label display;
-    @javafx.fxml.FXML
-    private TextField passwordField;
     @javafx.fxml.FXML
     private TableColumn<Exam,String> examlistCol;
     @javafx.fxml.FXML
@@ -34,32 +30,22 @@ public class PublishExamScheduleController
     public void initialize() {
 
         examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+        examList.add(new Exam("BioChemistry"));
+        examList.add(new Exam("MicroBiology"));
+        examList.add(new Exam("Chemistry"));
+
+        examlistTable.getItems().addAll(examList);
+
 
     }
 
     @javafx.fxml.FXML
     public void publishButton(ActionEvent actionEvent) {
 
-        if (examlistTable.getItems().isEmpty()) {
-            display.setText("No exam schedule to publish!");
-            return;
-        }
-
         display.setText("Exam schedule published successfully!");
 
     }
 
-    @javafx.fxml.FXML
-    public void loginButton(ActionEvent actionEvent) {
-
-        if (usernameField.getText().equals("admin") &&
-                passwordField.getText().equals("1234")) {
-
-            display.setText("Login successful!");
-        } else {
-            display.setText("Invalid username or password!");
-        }
-    }
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
