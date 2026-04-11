@@ -1,5 +1,7 @@
 package com.spring26.section2.group11.medical.ashif;
 
+import java.awt.*;
+
 public class Exam {
     private String description;
     private String event;
@@ -14,6 +16,7 @@ public class Exam {
     private String report;
     private String questionPaper;
     private String category;
+    private Label emptyLabel;
 
     public Exam(String description, String event, int type) {
         this.description = description;
@@ -33,6 +36,7 @@ public class Exam {
         this.report = report;
         this.description = null;
     }
+
 
     public Exam(int question) {
         this.question = question;
@@ -63,6 +67,11 @@ public class Exam {
     public Exam(String exam, double totalScore) {
         this.exam = exam;
         this.totalScore = 0;
+    }
+
+    public Exam(String exam, int question) {
+        this.exam = exam;
+        this.question = question;
     }
 
     public double getTotalScore() {

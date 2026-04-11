@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +17,8 @@ public class DateAndTimeForExamController
     private ComboBox<String> timeCB;
     @javafx.fxml.FXML
     private DatePicker datePicker;
+    @javafx.fxml.FXML
+    private Label emptyLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -27,14 +30,16 @@ public class DateAndTimeForExamController
     public void dateAndTimeButton(ActionEvent actionEvent) {
 
         if (datePicker.getValue() == null || timeCB.getValue() == null) {
-            System.out.println("Please select both date and time!");
+            emptyLabel.setText("Please select both date and time!");
             return;
         }
 
-        System.out.println("Exam scheduled on: "
-                + datePicker.getValue()
-                + " at "
-                + timeCB.getValue());
+        emptyLabel.setText(
+                "Exam scheduled on: "
+                        + datePicker.getValue()
+                        + " at "
+                        + timeCB.getValue()
+        );
     }
 
     @javafx.fxml.FXML

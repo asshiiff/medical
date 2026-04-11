@@ -29,11 +29,25 @@ public class MonitorExamStatusController
     public void initialize() {
         examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
 
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+
+        examList.add(new Exam("Midterm"));
+        examList.add(new Exam("Final"));
+        examList.add(new Exam("Quiz"));
+
+        examlistTable.getItems().addAll(examList);
+
+
+
 
     }
 
     @javafx.fxml.FXML
     public void refreshButton(ActionEvent actionEvent) {
+
+        examlistTable.refresh();
+
+        display.setText("Exam status refreshed!");
     }
 
     @javafx.fxml.FXML

@@ -19,6 +19,13 @@ public class Student {
     private String time;
     private String room;
     private int age;
+    private LocalDate date;
+
+    public Student(String subject, String room, LocalDate date) {
+        this.subject = subject;
+        this.room = room;
+        this.date = date;
+    }
 
     public Student(String studentName, int age, String password) {
         this.studentName = studentName;
@@ -188,6 +195,14 @@ public class Student {
         this.age = age;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -206,6 +221,8 @@ public class Student {
                 ", total=" + total +
                 ", time='" + time + '\'' +
                 ", room='" + room + '\'' +
+                ", age=" + age +
+                ", date=" + date +
                 '}';
     }
 }
