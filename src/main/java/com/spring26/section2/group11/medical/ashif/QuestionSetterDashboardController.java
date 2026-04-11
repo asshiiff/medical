@@ -19,9 +19,7 @@ public class QuestionSetterDashboardController
 
         questionSetterDashboardLabel.setText("Welcome to Question Setter Dashboard");
 
-
-        String username = "Ashif";
-        questionSetterDashboardLabel.setText("Welcome, " + username);
+        questionSetterDashboardLabel.setText("Question Setter");
 
 
 
@@ -67,7 +65,7 @@ public class QuestionSetterDashboardController
     public void logOutButton(ActionEvent actionEvent) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("/com/spring26/section2/group11/medical/login.fxml")
+                HelloApplication.class.getResource("/com/spring26/section2/group11/medical/loginPage.fxml")
         );
         Scene scene = new Scene(fxmlLoader.load());
 

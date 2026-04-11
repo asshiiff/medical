@@ -28,9 +28,8 @@ public class CenterForExamController
 
         String selectedCenter = centerCB.getValue();
 
-        System.out.println("Selected Center: " + selectedCenter);
+        display.setText("Selected Center: " + selectedCenter);
 
-        display.setText("Saved Successfully");
     }
 
     @javafx.fxml.FXML

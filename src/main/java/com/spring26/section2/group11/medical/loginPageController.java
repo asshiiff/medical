@@ -46,5 +46,50 @@ public class loginPageController
             stage.setScene(scene);
             stage.show();
         }
+
+        if (username.equals("examcontroller") && password.equals("1234")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/examControllerDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = (Stage) usernameField.getScene().getWindow();
+
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+
+
+        if (username.equals("questionsetter") && password.equals("1234")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashif/questionSetterDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = (Stage) usernameField.getScene().getWindow();
+
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+
+        if (username.equals("Student") && password.equals("9090")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/arnob/studentDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = (Stage) usernameField.getScene().getWindow();
+
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+
+        if (username.equals("ExamEvaluator") && password.equals("8080")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/arnob/ExamEvaluatorDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = (Stage) usernameField.getScene().getWindow();
+
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 }
