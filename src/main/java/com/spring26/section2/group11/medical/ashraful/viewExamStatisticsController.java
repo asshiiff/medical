@@ -67,7 +67,7 @@ public class viewExamStatisticsController
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/medicalCollegeAuthorityDashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/invigilatorDashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) distributionPieChart.getScene().getWindow();
