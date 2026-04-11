@@ -23,14 +23,22 @@ public class feedbackController {
     @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML
-    private Label display4;
+    private Label thankYouLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        typeCB.getItems().addAll("Advice","Complain");
     }
 
     @javafx.fxml.FXML
     public void sendButton(ActionEvent actionEvent) {
+
+        thankYouLabel.setText("ThankYou For Your Feedback");
+
+        typeCB.getSelectionModel().clearSelection();
+
+        messageField.clear();
+
     }
 
     @javafx.fxml.FXML

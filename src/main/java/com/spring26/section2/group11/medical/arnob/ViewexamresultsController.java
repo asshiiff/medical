@@ -27,6 +27,8 @@ public class ViewexamresultsController {
     private TableView<Student> viewResultTable;
     @javafx.fxml.FXML
     private TableColumn<Student,Integer> totalCol;
+    @javafx.fxml.FXML
+    private Label viewLabel;
 
     List<Student> studentList = new ArrayList<>();
 
@@ -42,17 +44,18 @@ public class ViewexamresultsController {
         studentList.add(new Student("Physics", 70, 100, "2nd"));
         studentList.add(new Student("Chemistry", 60, 100, "3rd"));
 
-        viewResultTable.getItems().addAll(studentList);
+
 
     }
 
     @javafx.fxml.FXML
     public void viewResultButton(ActionEvent actionEvent) {
+
+        viewResultTable.getItems().addAll(studentList);
+
+        viewLabel.setText("Exam Result Show by Ranking");
     }
 
-    @Deprecated
-    public void downloadPdfButton(ActionEvent actionEvent) {
-    }
 
 
     @javafx.fxml.FXML
@@ -66,5 +69,12 @@ public class ViewexamresultsController {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void refreshButton(ActionEvent actionEvent) {
+
+        viewResultTable.getItems().clear();
+        viewLabel.setText("");
     }
 }

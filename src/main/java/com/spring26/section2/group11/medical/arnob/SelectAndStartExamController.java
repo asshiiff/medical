@@ -17,14 +17,32 @@ public class SelectAndStartExamController {
     @javafx.fxml.FXML
     private ComboBox<String> examSubjectCB;
     @javafx.fxml.FXML
-    private TextArea instructionsArea;
+    private Label exam4Label;
+    @javafx.fxml.FXML
+    private Label exam1Label;
+    @javafx.fxml.FXML
+    private Label exam2Label;
+    @javafx.fxml.FXML
+    private Label examinstructionsLabel;
+    @javafx.fxml.FXML
+    private Label exam3Label;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        examSubjectCB.getItems().addAll("Math","Physics","Chemistry");
+
+
     }
 
     @javafx.fxml.FXML
     public void startExamButton(ActionEvent actionEvent) {
+
+        examinstructionsLabel.setText("Exam Instruction :");
+        exam1Label.setText("1. Do not use unfair means.");
+        exam2Label.setText("2. Manage your time properly.");
+        exam3Label.setText("3. Make sure internet connection is stable.");
+        exam4Label.setText("4. Complete exam within time.");
     }
 
     @javafx.fxml.FXML

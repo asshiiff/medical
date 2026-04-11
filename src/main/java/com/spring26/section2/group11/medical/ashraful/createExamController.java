@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -25,6 +26,8 @@ public class createExamController
     private TextField examNameField;
     @javafx.fxml.FXML
     private ComboBox<String> selectSubjectCB;
+    @javafx.fxml.FXML
+    private Label displayLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -52,8 +55,10 @@ public class createExamController
             writer.newLine();
             writer.write(examInstructions);
 
+            displayLabel.setText("Exam File Saved");
+
         } catch ( IOException e ) {
-            System.out.println("Write Failed");
+            displayLabel.setText("Write Failed");
         }
 
 
