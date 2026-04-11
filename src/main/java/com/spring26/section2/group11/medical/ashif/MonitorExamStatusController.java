@@ -27,9 +27,9 @@ public class MonitorExamStatusController
 
     @javafx.fxml.FXML
     public void initialize() {
-        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("category"));
 
-        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("category"));
 
         examList.add(new Exam("Midterm"));
         examList.add(new Exam("Final"));

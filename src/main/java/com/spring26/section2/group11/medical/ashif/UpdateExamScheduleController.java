@@ -30,7 +30,7 @@ public class UpdateExamScheduleController
     @javafx.fxml.FXML
     public void initialize() {
 
-        examlistCol.setCellValueFactory(new PropertyValueFactory<>("exam"));
+        examlistCol.setCellValueFactory(new PropertyValueFactory<>("category"));
 
         examCB.getItems().addAll("DBMS","DS","DLD");
 
@@ -43,11 +43,6 @@ public class UpdateExamScheduleController
     @javafx.fxml.FXML
     public void updateButton(ActionEvent actionEvent) {
 
-        Exam selected = examlistTable.getSelectionModel().getSelectedItem();
-
-        String text = examCB.getValue() + " | " + datePicker.getValue();
-
-        selected.setExam(text);
         examlistTable.refresh();
 
         emptyLabel.setText("Updated Successfully");
