@@ -11,6 +11,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
@@ -29,13 +31,12 @@ public class generateApprovalListController
     @javafx.fxml.FXML
     private TableColumn<Candidate, Double> candidateCgpaCol;
 
-
+    List<Candidate> ImmunologyApprovalList = approveApplicationController.ImmunologyApplicationsList;
+    List<Candidate> ToxicologyApprovalList = approveApplicationController.ToxicologyApplicationsList;
+    List<Candidate> PharmacologyApprovalList = approveApplicationController.PharmacologyApplicationsList;
 
     @javafx.fxml.FXML
     public void initialize() {
-        List<Candidate> ImmunologyApprovalList = approveApplicationController.ImmunologyApplicationsList;
-        List<Candidate> ToxicologyApprovalList = approveApplicationController.ToxicologyApplicationsList;
-        List<Candidate> PharmacologyApprovalList = approveApplicationController.PharmacologyApplicationsList;
 
         applicationsListCol.setCellValueFactory(new PropertyValueFactory<>("application"));
         candidateNameCol.setCellValueFactory(new PropertyValueFactory<>("candidateName"));
@@ -49,6 +50,34 @@ public class generateApprovalListController
 
     @javafx.fxml.FXML
     public void downloadListButton(ActionEvent actionEvent) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("approvalList.txt"))) {
+            for (Candidate u: ImmunologyApprovalList) {
+                writer.write(u.getApplication() + " ");
+                writer.write(u.getCandidateName() + " ");
+                writer.write(u.getCgpa() + " ");
+                writer.write( String.valueOf(u.isApplicationStatus()) );
+                writer.newLine();
+            }
+
+            for (Candidate u: ToxicologyApprovalList) {
+                writer.write(u.getApplication() + " ");
+                writer.write(u.getCandidateName() + " ");
+                writer.write(u.getCgpa() + " ");
+                writer.write( String.valueOf(u.isApplicationStatus()) );
+                writer.newLine();
+            }
+
+            for (Candidate u: PharmacologyApprovalList) {
+                writer.write(u.getApplication() + " ");
+                writer.write(u.getCandidateName() + " ");
+                writer.write(u.getCgpa() + " ");
+                writer.write( String.valueOf(u.isApplicationStatus()) );
+                writer.newLine();
+            }
+
+        } catch (IOException e) {
+            System.out.println("File write failed");
+        }
     }
 
     @javafx.fxml.FXML

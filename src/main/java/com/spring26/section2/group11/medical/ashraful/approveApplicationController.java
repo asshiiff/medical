@@ -125,6 +125,7 @@ public class approveApplicationController
         for (Candidate u: ToxicologyApplicationsList) {
             if ( u.equals(candidate) ) {
                 u.setApplicationStatus(true);
+                applicationsTable.getItems().clear();
                 applicationsTable.getItems().addAll(ToxicologyApplicationsList);
             }
         }
@@ -132,6 +133,7 @@ public class approveApplicationController
         for (Candidate u: PharmacologyApplicationsList) {
             if ( u.equals(candidate) ) {
                 u.setApplicationStatus(true);
+                applicationsTable.getItems().clear();
                 applicationsTable.getItems().addAll(PharmacologyApplicationsList);
 
             }
