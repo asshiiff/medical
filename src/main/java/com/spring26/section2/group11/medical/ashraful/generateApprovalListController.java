@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -34,6 +35,12 @@ public class generateApprovalListController
     List<Candidate> ImmunologyApprovalList = approveApplicationController.ImmunologyApplicationsList;
     List<Candidate> ToxicologyApprovalList = approveApplicationController.ToxicologyApplicationsList;
     List<Candidate> PharmacologyApprovalList = approveApplicationController.PharmacologyApplicationsList;
+    @javafx.fxml.FXML
+    private Label displayLabel;
+    @javafx.fxml.FXML
+    private Label rejectedLabel;
+    @javafx.fxml.FXML
+    private Label acceptedLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -46,6 +53,49 @@ public class generateApprovalListController
         applicationsTable.getItems().addAll(ImmunologyApprovalList);
         applicationsTable.getItems().addAll(ToxicologyApprovalList);
         applicationsTable.getItems().addAll(PharmacologyApprovalList);
+
+        double trueCount = 0;
+        double falseCount = 0;
+        double totalCount = 0;
+
+        for (Candidate u : ImmunologyApprovalList) {
+            if ( u.isApplicationStatus() ) {
+                trueCount = trueCount + 1;
+                totalCount = totalCount + 1;
+            } else {
+                falseCount = falseCount + 1;
+                totalCount = totalCount + 1;
+            }
+        }
+
+        for (Candidate u : ToxicologyApprovalList) {
+            if ( u.isApplicationStatus() ) {
+                trueCount = trueCount + 1;
+                totalCount = totalCount + 1;
+            } else {
+                falseCount = falseCount + 1;
+                totalCount = totalCount + 1;
+            }
+        }
+
+        for (Candidate u : PharmacologyApprovalList) {
+            if ( u.isApplicationStatus() ) {
+                trueCount = trueCount + 1;
+                totalCount = totalCount + 1;
+            } else {
+                falseCount = falseCount + 1;
+                totalCount = totalCount + 1;
+            }
+        }
+
+        double approvalPercentage = (trueCount/totalCount) * 100;
+        double rejectedPercentage = (falseCount/totalCount) * 100;
+
+        approvedRejectedPieChart.getData().add(new PieChart.Data("Accepted", approvalPercentage));
+        approvedRejectedPieChart.getData().add(new PieChart.Data("Rejected", rejectedPercentage));
+
+        acceptedLabel.setText("Accepted: " + approvalPercentage + "%");
+        rejectedLabel.setText("Rejected: " + rejectedPercentage + "%");
     }
 
     @javafx.fxml.FXML
@@ -74,6 +124,8 @@ public class generateApprovalListController
                 writer.write( String.valueOf(u.isApplicationStatus()) );
                 writer.newLine();
             }
+
+            displayLabel.setText("List Saved");
 
         } catch (IOException e) {
             System.out.println("File write failed");

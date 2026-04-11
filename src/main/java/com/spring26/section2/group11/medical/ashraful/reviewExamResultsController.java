@@ -8,9 +8,12 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.jar.Attributes;
 
 public class reviewExamResultsController
@@ -26,12 +29,43 @@ public class reviewExamResultsController
     @javafx.fxml.FXML
     private TableView<Candidate> resultsTable;
 
+    List<Candidate> ImmunologyStudentList = new ArrayList<>();
+    List<Candidate> ToxicologyStudentList = new ArrayList<>();
+    List<Candidate> PharmacologyStudentList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+        studentNameCol.setCellValueFactory(new PropertyValueFactory<>("candidateName"));
+        scoreCol.setCellValueFactory(new PropertyValueFactory<>("candidateScore"));
+
+        ImmunologyStudentList.add(new Candidate("Ashraful Islam", 93));
+        ImmunologyStudentList.add(new Candidate("Arnob Datta",  81));
+        ImmunologyStudentList.add(new Candidate("Asif Islam", 71));
+
+        ToxicologyStudentList.add(new Candidate("Mozammel Hossain", 95 ));
+        ToxicologyStudentList.add(new Candidate("Abdullah Al Mamun", 61));
+
+        PharmacologyStudentList.add(new Candidate("Ayman Rahman", 80));
     }
 
     @javafx.fxml.FXML
     public void loadExamResultsButton(ActionEvent actionEvent) {
+        String exam = selectExamCB.getValue();
+
+        if (exam.equals("Immunology")) {
+            resultsTable.getItems().clear();
+            resultsTable.getItems().addAll(ImmunologyStudentList);
+        }
+
+        if (exam.equals("Toxicology")) {
+            resultsTable.getItems().clear();
+            resultsTable.getItems().addAll(ToxicologyStudentList);
+        }
+
+        if (exam.equals("Pharmacology")) {
+            resultsTable.getItems().clear();
+            resultsTable.getItems().addAll((PharmacologyStudentList));
+        }
     }
 
     @javafx.fxml.FXML

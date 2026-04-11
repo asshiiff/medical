@@ -16,6 +16,7 @@ public class medicalCollegeAuthorityDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

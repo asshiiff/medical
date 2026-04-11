@@ -5,12 +5,28 @@ public class Candidate {
     private String candidateName;
     private boolean candidateAttendance;
     private String candidateStatus;
-    private int candidateScore;
+    private double candidateScore;
     private String candidateExam;
     private String candidateSeat;
     private String application;
     private double cgpa;
     private boolean applicationStatus;
+
+    public Candidate(String candidateName, double candidateScore) {
+        this.candidateName = candidateName;
+        this.candidateScore = candidateScore;
+    }
+
+    public Candidate(int candidateId, String candidateName, String candidateStatus) {
+        this.candidateId = candidateId;
+        this.candidateName = candidateName;
+        this.candidateStatus = candidateStatus;
+    }
+
+    public Candidate(String candidateName, int candidateId) {
+        this.candidateName = candidateName;
+        this.candidateId = candidateId;
+    }
 
     public Candidate(String application, String candidateName, double cgpa, boolean applicationStatus) {
         this.application = application;
@@ -57,11 +73,11 @@ public class Candidate {
         this.candidateStatus = candidateStatus;
     }
 
-    public int getCandidateScore() {
+    public double getCandidateScore() {
         return candidateScore;
     }
 
-    public void setCandidateScore(int candidateScore) {
+    public void setCandidateScore(double candidateScore) {
         this.candidateScore = candidateScore;
     }
 
