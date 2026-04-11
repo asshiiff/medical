@@ -12,6 +12,13 @@ public class Candidate {
     private double cgpa;
     private boolean applicationStatus;
 
+    public Candidate(int candidateId, String candidateName, String candidateExam, String application) {
+        this.candidateId = candidateId;
+        this.candidateName = candidateName;
+        this.candidateExam = candidateExam;
+        this.application = null;
+    }
+
     public Candidate(String candidateName, double candidateScore) {
         this.candidateName = candidateName;
         this.candidateScore = candidateScore;

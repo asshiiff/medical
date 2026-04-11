@@ -21,5 +21,6 @@
          </columnResizePolicy>
       </TableView>
       <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Button layoutX="371.0" layoutY="41.0" mnemonicParsing="false" onAction="#refreshButton" prefHeight="27.0" prefWidth="107.0" text="Refresh" />
    </children>
 </AnchorPane>

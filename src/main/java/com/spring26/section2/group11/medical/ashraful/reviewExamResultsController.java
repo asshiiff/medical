@@ -35,17 +35,20 @@ public class reviewExamResultsController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        selectExamCB.getItems().addAll("Immunology", "Toxicology", "Pharmacology");
+
         studentNameCol.setCellValueFactory(new PropertyValueFactory<>("candidateName"));
         scoreCol.setCellValueFactory(new PropertyValueFactory<>("candidateScore"));
 
-        ImmunologyStudentList.add(new Candidate("Ashraful Islam", 93));
-        ImmunologyStudentList.add(new Candidate("Arnob Datta",  81));
-        ImmunologyStudentList.add(new Candidate("Asif Islam", 71));
+        ImmunologyStudentList.add(new Candidate("Ashraful Islam", 93.5));
+        ImmunologyStudentList.add(new Candidate("Arnob Datta",  81.2));
+        ImmunologyStudentList.add(new Candidate("Asif Islam", 71.1));
 
-        ToxicologyStudentList.add(new Candidate("Mozammel Hossain", 95 ));
-        ToxicologyStudentList.add(new Candidate("Abdullah Al Mamun", 61));
+        ToxicologyStudentList.add(new Candidate("Mozammel Hossain", 95.1 ));
+        ToxicologyStudentList.add(new Candidate("Abdullah Al Mamun", 61.6));
 
-        PharmacologyStudentList.add(new Candidate("Ayman Rahman", 80));
+        PharmacologyStudentList.add(new Candidate("Ayman Rahman", 80.4));
     }
 
     @javafx.fxml.FXML
