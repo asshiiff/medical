@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -18,24 +17,46 @@ public class studentPerformanceStatisticsController {
     @javafx.fxml.FXML
     private ComboBox<String> subjectCB;
     @javafx.fxml.FXML
-    private DatePicker toLocalDate;
-    @javafx.fxml.FXML
-    private DatePicker fromLocalDate;
-    @javafx.fxml.FXML
-    private Label display3;
-    @javafx.fxml.FXML
     private Label display2;
     @javafx.fxml.FXML
     private PieChart resultChart;
-    @javafx.fxml.FXML
-    private Label display4;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        subjectCB.getItems().addAll("Math","Physics","Chemistry");
     }
 
     @javafx.fxml.FXML
     public void statisticsButton(ActionEvent actionEvent) {
+
+        String subject = subjectCB.getValue();
+
+        resultChart.getData().clear();
+
+        if(subject.equals("Math")){
+
+            resultChart.getData().add(new PieChart.Data("Pass", 20));
+            resultChart.getData().add(new PieChart.Data("Fail", 5));
+            resultChart.getData().add(new PieChart.Data("Average", 10));
+
+        }
+
+        else if(subject.equals("Physics")){
+
+            resultChart.getData().add(new PieChart.Data("Pass", 15));
+            resultChart.getData().add(new PieChart.Data("Fail", 8));
+            resultChart.getData().add(new PieChart.Data("Average", 12));
+
+        }
+
+        else if(subject.equals("Chemistry")){
+
+            resultChart.getData().add(new PieChart.Data("Pass", 25));
+            resultChart.getData().add(new PieChart.Data("Fail", 3));
+            resultChart.getData().add(new PieChart.Data("Average", 7));
+
+        }
     }
 
     @javafx.fxml.FXML

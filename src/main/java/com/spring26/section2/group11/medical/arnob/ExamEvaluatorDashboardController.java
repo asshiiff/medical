@@ -108,4 +108,17 @@ public class ExamEvaluatorDashboardController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    public void studentContactButton(ActionEvent actionEvent)throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/arnob/studentContact.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) ExamEvaluatorLabel.getScene().getWindow();
+
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

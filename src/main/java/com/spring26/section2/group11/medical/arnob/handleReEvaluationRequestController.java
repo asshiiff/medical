@@ -18,8 +18,6 @@ public class handleReEvaluationRequestController {
     @javafx.fxml.FXML
     private TextField studentIdField;
     @javafx.fxml.FXML
-    private TextField requestMarksField;
-    @javafx.fxml.FXML
     private TableColumn<Handelrequest, Integer> marksCol;
     @javafx.fxml.FXML
     private TableColumn<Handelrequest, String> statusCol;
@@ -37,6 +35,10 @@ public class handleReEvaluationRequestController {
     private TableView<Handelrequest> requestTable;
     @javafx.fxml.FXML
     private ComboBox<String> subjectCB;
+    @javafx.fxml.FXML
+    private TextField marksField;
+    @javafx.fxml.FXML
+    private Label doneLabel;
 
     List<Handelrequest> handelrequestList = new ArrayList<>();
 
@@ -58,9 +60,10 @@ public class handleReEvaluationRequestController {
         String subject = statusCB.getValue();
 
         int sid = Integer.parseInt(studentIdField.getText());
-        int marks = Integer.parseInt(requestMarksField.getText());
+        int marks = Integer.parseInt(marksField.getText());
 
         String status = statusCB.getValue();
+
         String reason = reasonField.getText();
 
 
@@ -73,6 +76,17 @@ public class handleReEvaluationRequestController {
 
     @javafx.fxml.FXML
     public void approveButton(ActionEvent actionEvent) {
+
+        doneLabel.setText("Request Sent High Authority");
+
+        subjectCB.getSelectionModel().clearSelection();
+        statusCB.getSelectionModel().clearSelection();
+
+        studentIdField.clear();
+        reasonField.clear();
+        marksField.clear();
+
+        requestTable.getItems().clear();
     }
 
     @javafx.fxml.FXML
