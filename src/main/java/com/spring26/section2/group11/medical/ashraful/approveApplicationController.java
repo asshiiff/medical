@@ -23,9 +23,10 @@ public class approveApplicationController
     @javafx.fxml.FXML
     private TableColumn<Candidate, String> applicationsCol;
 
-    List<Candidate> ImmunologyApplicationsList = new ArrayList<>();
-    List<Candidate> ToxicologyApplicationsList = new ArrayList<>();
-    List<Candidate> PharmacologyApplicationsList = new ArrayList<>();
+    static List<Candidate> ImmunologyApplicationsList = new ArrayList<>();
+    static List<Candidate> ToxicologyApplicationsList = new ArrayList<>();
+    static List<Candidate> PharmacologyApplicationsList = new ArrayList<>();
+
     @javafx.fxml.FXML
     private TableColumn<Candidate, String> candidateNameCol;
     @javafx.fxml.FXML
