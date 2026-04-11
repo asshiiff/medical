@@ -20,6 +20,14 @@ public class Student {
     private String room;
     private int age;
     private LocalDate date;
+    private String number;
+    private String address;
+
+    public Student(String studentName, String number, String address) {
+        this.studentName = studentName;
+        this.number = number;
+        this.address = address;
+    }
 
     public Student(String subject, String room, LocalDate date) {
         this.subject = subject;
@@ -91,13 +99,9 @@ public class Student {
         this.department = department;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() {return password;}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public void setPassword(String password) {this.password = password;}
 
     public String getSemester() {
         return semester;
@@ -203,6 +207,22 @@ public class Student {
         this.date = date;
     }
 
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -223,6 +243,8 @@ public class Student {
                 ", room='" + room + '\'' +
                 ", age=" + age +
                 ", date=" + date +
+                ", number='" + number + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
