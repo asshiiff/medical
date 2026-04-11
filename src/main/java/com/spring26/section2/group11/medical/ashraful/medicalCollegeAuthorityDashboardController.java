@@ -57,7 +57,7 @@ public class medicalCollegeAuthorityDashboardController
 
     @javafx.fxml.FXML
     public void logOutButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/searchCandidates.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/loginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) dashboardLabel.getScene().getWindow();
