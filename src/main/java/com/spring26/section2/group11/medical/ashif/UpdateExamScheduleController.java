@@ -45,16 +45,12 @@ public class UpdateExamScheduleController
 
         Exam selected = examlistTable.getSelectionModel().getSelectedItem();
 
-        if (selected == null || examCB.getValue() == null || datePicker.getValue() == null) {
-            emptyLabel.setText("Updated Exam and Date!");
-            return;
-        }
+        String text = examCB.getValue() + " | " + datePicker.getValue();
 
-        selected.setExam(examCB.getValue() + " | " + datePicker.getValue());
-
+        selected.setExam(text);
         examlistTable.refresh();
 
-        emptyLabel.setText("Updated Exam and Date!");
+        emptyLabel.setText("Updated Successfully");
     }
 
     @javafx.fxml.FXML

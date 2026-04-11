@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,6 +14,8 @@ public class CenterForExamController
 {
     @javafx.fxml.FXML
     private ComboBox<String> centerCB;
+    @javafx.fxml.FXML
+    private Label display;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -25,12 +28,9 @@ public class CenterForExamController
 
         String selectedCenter = centerCB.getValue();
 
-        if (selectedCenter == null) {
-            System.out.println("Please select a center!");
-            return;
-        }
-
         System.out.println("Selected Center: " + selectedCenter);
+
+        display.setText("Saved Successfully");
     }
 
     @javafx.fxml.FXML

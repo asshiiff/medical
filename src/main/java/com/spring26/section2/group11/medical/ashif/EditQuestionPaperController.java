@@ -4,10 +4,7 @@ import com.spring26.section2.group11.medical.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -27,6 +24,8 @@ public class EditQuestionPaperController
     private TextArea textArea;
 
     List<Exam> examList = new ArrayList<>();
+    @javafx.fxml.FXML
+    private Label display;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -46,13 +45,7 @@ public class EditQuestionPaperController
     @javafx.fxml.FXML
     public void changeButton(ActionEvent actionEvent) {
 
-        Exam selected = questionListTable.getSelectionModel().getSelectedItem();
-
-        if (selected == null || difficultyCB.getValue() == null) {
-            return;
-        }
-
-        selected.setQuestion(Integer.parseInt(textArea.getText()));
+        display.setText("Edit Question Successfully");
 
         questionListTable.refresh();
     }

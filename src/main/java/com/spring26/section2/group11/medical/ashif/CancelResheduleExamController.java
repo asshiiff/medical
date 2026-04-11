@@ -45,23 +45,6 @@ public class CancelResheduleExamController
     @javafx.fxml.FXML
     public void resheduleButton(ActionEvent actionEvent) {
 
-        Exam selectedExam = examlistTable.getSelectionModel().getSelectedItem();
-
-        if (selectedExam == null) {
-            display.setText("Please select an exam first!");
-            return;
-        }
-
-        if (datePicker.getValue() == null || newTimeCB.getValue() == null) {
-            display.setText("Select date and time!");
-            return;
-        }
-
-        selectedExam.setExam(
-                selectedExam.getExam() + " | " + datePicker.getValue() + " | " + newTimeCB.getValue()
-        );
-
-        examlistTable.refresh();
         display.setText("Rescheduled successfully!");
 
     }

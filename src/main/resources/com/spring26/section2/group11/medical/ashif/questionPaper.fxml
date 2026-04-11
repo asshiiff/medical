@@ -20,6 +20,6 @@
       </TableView>
       <Button layoutX="500.0" layoutY="333.0" mnemonicParsing="false" onAction="#saveButton" text="Save" />
       <Button layoutX="57.0" layoutY="333.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
-      <Label fx:id="display" layoutX="229.0" layoutY="337.0" prefHeight="17.0" prefWidth="159.0" />
+      <Label fx:id="display" layoutX="169.0" layoutY="337.0" prefHeight="17.0" prefWidth="268.0" />
    </children>
 </AnchorPane>
