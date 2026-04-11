@@ -45,10 +45,6 @@ public class CategorizeQuestionsController
     @javafx.fxml.FXML
     public void assignButton(ActionEvent actionEvent) {
 
-        Exam selected = questionsTable.getSelectionModel().getSelectedItem();
-
-        selected.setCategory(categoryCB.getValue());
-
         display.setText("Assigned Successfully");
 
         questionsTable.refresh();

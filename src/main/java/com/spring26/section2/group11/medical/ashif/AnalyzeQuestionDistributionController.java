@@ -65,7 +65,7 @@ public class AnalyzeQuestionDistributionController
     @javafx.fxml.FXML
     public void saveQuestionDescriptionButton(ActionEvent actionEvent) {
 
-        display.setText("Save Successfully");
+        display.setText("Saved Successfully");
 
     }
 }
