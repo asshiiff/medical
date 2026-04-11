@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -24,6 +25,8 @@ public class CategorizeQuestionsController
     private TableView<Exam> questionsTable;
 
     List<Exam> examList = new ArrayList<>();
+    @javafx.fxml.FXML
+    private Label display;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,6 +48,8 @@ public class CategorizeQuestionsController
         Exam selected = questionsTable.getSelectionModel().getSelectedItem();
 
         selected.setCategory(categoryCB.getValue());
+
+        display.setText("Assigned Successfully");
 
         questionsTable.refresh();
     }
