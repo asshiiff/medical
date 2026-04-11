@@ -16,6 +16,7 @@ public class viewFAQController
 
     @javafx.fxml.FXML
     public void initialize() {
+        faqTextArea.setText("");
     }
 
     @javafx.fxml.FXML
