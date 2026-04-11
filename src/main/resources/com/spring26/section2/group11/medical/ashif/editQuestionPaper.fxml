@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -18,8 +19,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ComboBox fx:id="difficultyCB" layoutX="51.0" layoutY="274.0" prefWidth="150.0" promptText="Difficulty: Easy/Medium/Hard" />
+      <ComboBox fx:id="difficultyCB" layoutX="51.0" layoutY="274.0" prefWidth="150.0" promptText="Difficulty" />
       <Button layoutX="420.0" layoutY="274.0" mnemonicParsing="false" onAction="#changeButton" text="Save Changes" />
       <Button layoutX="51.0" layoutY="340.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Label fx:id="display" layoutX="300.0" layoutY="344.0" prefHeight="17.0" prefWidth="265.0" />
    </children>
 </AnchorPane>

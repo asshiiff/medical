@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="441.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group11.medical.arnob.ExamEvaluatorDashboardController">
    <children>
       <Label fx:id="ExamEvaluatorLabel" layoutX="64.0" layoutY="118.0" prefHeight="140.0" prefWidth="215.0" text="Exam Evaluator" textFill="#511313">
@@ -13,13 +12,14 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="385.0" layoutY="49.0" mnemonicParsing="false" onAction="#manageAnswerKeyButton" prefHeight="25.0" prefWidth="169.0" text="Manage Answer Key" />
-      <Button layoutX="385.0" layoutY="106.0" mnemonicParsing="false" onAction="#checkMarksandGiveMarksButton" text="Check Marks and Give Marks" />
-      <Button layoutX="384.0" layoutY="154.0" mnemonicParsing="false" onAction="#FinalResultSheetPublicationButton" text="Final Result Sheet Publication" />
-      <Button layoutX="384.0" layoutY="208.0" mnemonicParsing="false" onAction="#createRankingButton" prefHeight="25.0" prefWidth="172.0" text="Create Ranking" />
-      <Button layoutX="381.0" layoutY="266.0" mnemonicParsing="false" onAction="#studentPerformanceStatisticsButton" text="Student Performance Statistics" />
-      <Button layoutX="381.0" layoutY="320.0" mnemonicParsing="false" onAction="#ArchiveOldExamDataButton" prefHeight="25.0" prefWidth="178.0" text="Archive Old-Exam Data" />
-      <Button layoutX="381.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleReEvalutionRequestButton" prefHeight="25.0" prefWidth="178.0" text="Handle Re-Evalution Request" />
+      <Button layoutX="376.0" layoutY="49.0" mnemonicParsing="false" onAction="#manageAnswerKeyButton" prefHeight="25.0" prefWidth="178.0" text="Manage Answer Key" />
+      <Button layoutX="376.0" layoutY="93.0" mnemonicParsing="false" onAction="#checkMarksandGiveMarksButton" prefHeight="25.0" prefWidth="178.0" text="Check Marks and Give Marks" />
+      <Button layoutX="378.0" layoutY="138.0" mnemonicParsing="false" onAction="#FinalResultSheetPublicationButton" prefHeight="25.0" prefWidth="178.0" text="Final Result Sheet Publication" />
+      <Button layoutX="378.0" layoutY="176.0" mnemonicParsing="false" onAction="#createRankingButton" prefHeight="25.0" prefWidth="178.0" text="Create Ranking" />
+      <Button layoutX="381.0" layoutY="214.0" mnemonicParsing="false" onAction="#studentPerformanceStatisticsButton" prefHeight="25.0" prefWidth="178.0" text="Student Performance Statistics" />
+      <Button layoutX="381.0" layoutY="258.0" mnemonicParsing="false" onAction="#ArchiveOldExamDataButton" prefHeight="25.0" prefWidth="178.0" text="Archive Old-Exam Data" />
+      <Button layoutX="381.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleReEvalutionRequestButton" prefHeight="25.0" prefWidth="178.0" text="Handle Re-Evalution Request" />
       <Button layoutX="38.0" layoutY="384.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="34.0" prefWidth="70.0" text="log out" />
+      <Button layoutX="382.0" layoutY="359.0" mnemonicParsing="false" onAction="#studentContactButton" prefHeight="25.0" prefWidth="178.0" text="Student Contact" />
    </children>
 </AnchorPane>

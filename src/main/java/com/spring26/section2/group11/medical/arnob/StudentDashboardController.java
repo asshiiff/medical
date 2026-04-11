@@ -110,4 +110,17 @@ public class StudentDashboardController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @javafx.fxml.FXML
+    public void contactTeacherButton(ActionEvent actionEvent) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/arnob/contactTeacher.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) studentDashboardLabel.getScene().getWindow();
+
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

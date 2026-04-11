@@ -8,6 +8,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class PreviewQuestionPaperController
@@ -25,13 +27,13 @@ public class PreviewQuestionPaperController
     @javafx.fxml.FXML
     public void previewButton(ActionEvent actionEvent) {
 
-        textArea.setText(
-                "=== Question Paper Preview ===\n\n" +
-                        "1. Question One\n" +
-                        "2. Question Two\n" +
-                        "3. Question Three\n\n" +
-                        "Total Marks: 100"
-        );
+        try ( BufferedWriter writer = new BufferedWriter(new FileWriter("ashif.txt")) ) {
+            writer.write(textArea.getText());
+            writer.newLine();
+
+        } catch ( IOException e ) {
+            System.out.println("Write Failed");
+        }
 
         display.setText("Preview generated!");
 

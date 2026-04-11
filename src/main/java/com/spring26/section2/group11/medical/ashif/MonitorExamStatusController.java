@@ -47,7 +47,7 @@ public class MonitorExamStatusController
 
         examlistTable.refresh();
 
-        display.setText("Exam status refreshed!");
+        display.setText("Monitor Exam Status refreshed!");
     }
 
     @javafx.fxml.FXML

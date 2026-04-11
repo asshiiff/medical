@@ -10,11 +10,11 @@
       <Label fx:id="display1" layoutX="54.0" layoutY="53.0" text="Choose Your Medical Examination Subject" />
       <ComboBox fx:id="examSubjectCB" layoutX="344.0" layoutY="49.0" prefHeight="42.0" prefWidth="150.0" promptText="Exam Subject" />
       <Button layoutX="506.0" layoutY="58.0" mnemonicParsing="false" onAction="#startExamButton" text="Start Exam" />
-      <Button layoutX="21.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
-      <Label fx:id="examinstructionsLabel" layoutX="21.0" layoutY="108.0" prefHeight="17.0" prefWidth="108.0" />
-      <Label fx:id="exam1Label" layoutX="138.0" layoutY="146.0" prefHeight="17.0" prefWidth="319.0" />
-      <Label fx:id="exam2Label" layoutX="138.0" layoutY="179.0" prefHeight="17.0" prefWidth="294.0" />
-      <Label fx:id="exam3Label" layoutX="138.0" layoutY="211.0" prefHeight="17.0" prefWidth="281.0" />
-      <Label fx:id="exam4Label" layoutX="138.0" layoutY="246.0" prefHeight="17.0" prefWidth="260.0" />
+      <Button layoutX="21.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#1b1a1a" />
+      <Label fx:id="examinstructionsLabel" layoutX="21.0" layoutY="108.0" prefHeight="17.0" prefWidth="108.0" textFill="#cd1818" />
+      <Label fx:id="exam1Label" layoutX="138.0" layoutY="146.0" prefHeight="17.0" prefWidth="319.0" textFill="#cd1111" />
+      <Label fx:id="exam2Label" layoutX="138.0" layoutY="179.0" prefHeight="17.0" prefWidth="294.0" textFill="#d00f0f" />
+      <Label fx:id="exam3Label" layoutX="138.0" layoutY="211.0" prefHeight="17.0" prefWidth="281.0" textFill="#d31010" />
+      <Label fx:id="exam4Label" layoutX="138.0" layoutY="246.0" prefHeight="17.0" prefWidth="260.0" textFill="#d31717" />
    </children>
 </AnchorPane>

@@ -4,14 +4,14 @@ public class Handelrequest {
 
     private String subject;
     private int studentId;
-    private int requestMarks;
+    private int marks;
     private String status;
     private String reason;
 
-    public Handelrequest(String subject, int studentId, int requestMarks, String status, String reason) {
+    public Handelrequest(String subject, int studentId, int marks, String status, String reason) {
         this.subject = subject;
         this.studentId = studentId;
-        this.requestMarks = requestMarks;
+        this.marks = marks;
         this.status = status;
         this.reason = reason;
     }
@@ -32,12 +32,12 @@ public class Handelrequest {
         this.studentId = studentId;
     }
 
-    public int getRequestMarks() {
-        return requestMarks;
+    public int getMarks() {
+        return marks;
     }
 
-    public void setRequestMarks(int requestMarks) {
-        this.requestMarks = requestMarks;
+    public void setMarks(int marks) {
+        this.marks = marks;
     }
 
     public String getStatus() {
@@ -61,7 +61,7 @@ public class Handelrequest {
         return "Handelrequest{" +
                 "subject='" + subject + '\'' +
                 ", studentId=" + studentId +
-                ", requestMarks=" + requestMarks +
+                ", marks=" + marks +
                 ", status='" + status + '\'' +
                 ", reason='" + reason + '\'' +
                 '}';

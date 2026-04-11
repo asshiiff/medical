@@ -8,6 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,7 @@ public class SaveQuestionBankController
 
         questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
         subjectCB.getItems().addAll("System","DBMS","DS");
+        difficultyCB.getItems().addAll("Easy","Medium","Hard");
         examList.add(new Exam(1));
         examList.add(new Exam(2));
 
@@ -55,10 +58,15 @@ public class SaveQuestionBankController
     @javafx.fxml.FXML
     public void addQuestionButton(ActionEvent actionEvent) {
 
-        questionTable.getItems().add(
-                new Exam(Integer.parseInt(textArea.getText()))
-        );
+        try ( BufferedWriter writer = new BufferedWriter(new FileWriter("ashif.txt")) ) {
+            writer.write(textArea.getText());
+            writer.newLine();
 
-        display.setText("Added!");
+        } catch ( IOException e ) {
+            System.out.println("Write Failed");
+
+        }
+
+        display.setText("Added Question!");
     }
 }
