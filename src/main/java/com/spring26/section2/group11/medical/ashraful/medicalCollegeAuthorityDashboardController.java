@@ -105,7 +105,7 @@ public class medicalCollegeAuthorityDashboardController
 
     @javafx.fxml.FXML
     public void viewFaqButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/viewFAQ.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/ashraf/viewRules.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) dashboardLabel.getScene().getWindow();

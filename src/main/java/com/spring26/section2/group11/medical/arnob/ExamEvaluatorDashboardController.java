@@ -80,7 +80,16 @@ public class ExamEvaluatorDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void logoutButton(ActionEvent actionEvent) {
+    public void logoutButton(ActionEvent actionEvent) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/spring26/section2/group11/medical/loginPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) ExamEvaluatorLabel.getScene().getWindow();
+
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
