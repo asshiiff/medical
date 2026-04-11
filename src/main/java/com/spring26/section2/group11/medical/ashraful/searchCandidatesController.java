@@ -27,7 +27,7 @@ public class searchCandidatesController
     @javafx.fxml.FXML
     private TableColumn<Candidate, String> candidateExamCol;
 
-    List<Candidate> studentList = new ArrayList<>();
+    static List<Candidate> studentList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -76,5 +76,7 @@ public class searchCandidatesController
 
     @javafx.fxml.FXML
     public void refreshButton(ActionEvent actionEvent) {
+        candidateTable.getItems().clear();
+        candidateTable.getItems().addAll(studentList);
     }
 }
